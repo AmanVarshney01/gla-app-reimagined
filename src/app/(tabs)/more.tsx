@@ -1,11 +1,12 @@
+
 import { StyleSheet } from 'react-native';
 
 import { Text, View } from '@/components/Themed';
 
-export default function ProfileScreen() {
+export default function MoreScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Profile</Text>
+      <Text style={styles.title}>More</Text>
     </View>
   );
 }
