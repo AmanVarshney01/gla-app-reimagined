@@ -1,16 +1,18 @@
-import { StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, View, Text } from 'react-native';
 // import { Image } from 'expo-image';
-
-import { Text, View } from '@/components/Themed';
+import profile1 from '../../../assets/profile1.json';
 
 export default function HomeScreen() {
+
+  const currentProfile = profile1[0];
+
   return (
     <View style={styles.container}>
       <View style={styles.profile}>
-        <Image style={styles.profilePhoto} source={require('../../../assets/profilephoto.jpg')}/>
+        <Image style={styles.profilePhoto} source={require('../../../assets/images/profilephoto.jpg')}/>
         <View>
-          <Text style={styles.name}>Aman Varshney</Text>
-          <Text>B. Tech - CS ( III ) <Text style={{color: 'green'}}>- Registered</Text></Text>        
+          <Text style={styles.name}>{currentProfile.name}</Text>
+          <Text>{currentProfile.course} - {currentProfile.branch} [ {currentProfile.semester} Sem ] <Text style={{color: 'green'}}>- Registered</Text></Text>        
         </View>
       </View>
       {/* <View style={{width: '100%', height: 100, backgroundColor: 'red'}}></View> */}
@@ -23,8 +25,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     // justifyContent: 'center',
-    padding: 10,
-    backgroundColor: '#F3F3F3',
+    // padding: 10,
+    backgroundColor: 'white',
   },
   profile: {
     display: 'flex',
@@ -33,9 +35,9 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     gap: 15,
     marginVertical: 10,
-    // backgroundColor: 'pink',
+    backgroundColor: 'white',
     width: '100%',
-    borderRadius: 10,
+    // borderRadius: 15,
     padding: 15,
   },
   profilePhoto: {

@@ -1,6 +1,4 @@
-import { StyleSheet } from 'react-native';
-
-import { Text, View } from '@/components/Themed';
+import { StyleSheet, View, Text } from 'react-native';
 
 export default function HelpScreen() {
   return (
@@ -15,6 +13,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'white',
   },
   title: {
     fontSize: 20,

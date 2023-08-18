@@ -1,9 +1,8 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link, Tabs } from "expo-router";
 import { Pressable, useColorScheme } from "react-native";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import Colors from "@/constants/Colors";
-import { View, Text } from "@/components/Themed";
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -38,9 +37,11 @@ export default function TabLayout() {
         options={{
           title: "Home",
           headerTitle: HomeHeader,
-          headerTitleStyle: {
-            fontSize: 20,
-          },
+          // headerTitleStyle: {
+          //   // fontSize: 20,
+          //   // margin: 50,
+          //   // backgroundColor: 'pink',
+          // },
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           // headerRight: () => (
           //   <Link href="/modal" asChild>
@@ -114,6 +115,7 @@ const styles = StyleSheet.create({
     // marginTop: 5,
     flexDirection: 'column',
     // gap: 1,
+    // backgroundColor: '#006400',
   },
   title: {
     fontSize: 20,
