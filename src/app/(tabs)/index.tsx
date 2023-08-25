@@ -8,26 +8,32 @@ export default function HomeScreen() {
   const currentProfile = profile1[0];
 
   return (
-      <ScrollView>
-        <View  className='flex p-4 justify-center items-center gap-4'>
-          <View className='flex-row p-4 w-full rounded-xl bg-white shadow shadow-black'>
-            <Image className=' rounded-full aspect-square w-16' source={require('../../../assets/images/profilephoto.jpg')}/>
+      <ScrollView className='bg-[#f8f5f2]'>
+        <View  className='p-2 justify-center items-center'>
+          <View className='flex-row p-4 w-full rounded-lg bg-white shadow shadow-black mb-2 border border-[#232323]'>
+            <Image className=' rounded-full aspect-square w-14 mr-4' source={require('../../../assets/images/profilephoto.jpg')}/>
             <View>
-              <Text  className=" text-2xl">{currentProfile.name}</Text>
-              <Text>{currentProfile.course} - {currentProfile.branch} [ {currentProfile.semester} Sem ] - {currentProfile.isRegistered ? <Text className=' text-green-600'>Registered</Text>: <Text className=' text-red-600'>Not Registered</Text>}</Text>        
+              <Text  className="text-[#232323] text-2xl">{currentProfile.name}</Text>
+              <Text className='text-[#222525]'>{currentProfile.course} - {currentProfile.branch} [ {currentProfile.semester} Sem ] - {currentProfile.isRegistered ? <Text className=' text-[#078080]'>Registered</Text>: <Text className=' text-red-600'>Not Registered</Text>}</Text>        
             </View>
           </View>
-          <View className='p-4 bg-white rounded-xl shadow shadow-black'>
-            <AnimatedCircularProgress
-              size={95} 
-              fill={currentProfile.attendance}
-              width={7}
-              tintColor="black"
-              backgroundColor="white"
-              rotation={0}
-              lineCap="round"
-              children={(fill) => <Text>{fill}%</Text>}
-            />
+          <View className='flex-row w-full'>
+            <View className='p-4 border border-[#232323] bg-white rounded-lg shadow shadow-black items-center mr-2'>
+              <AnimatedCircularProgress
+                size={95} 
+                fill={currentProfile.attendance}
+                width={7}
+                tintColor={currentProfile.attendance >= 75 ? '#078080' : '#f45d48'}
+                backgroundColor="white"
+                rotation={0}
+                lineCap="round"
+                children={(fill) => <Text>{fill}%</Text>}
+              />
+              <Text className='mt-2 text-[#222525]'>Attendance</Text>
+            </View>
+            <View className='bg-white rounded-xl'>
+
+            </View>
           </View>
         </View>
       </ScrollView>

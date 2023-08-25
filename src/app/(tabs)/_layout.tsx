@@ -17,8 +17,8 @@ function TabBarIcon(props: {
 function HomeHeader() {
   return (
     <View className=" ">
-      <Text className=" text-white font-bold text-xl">GLA University</Text>
-      <Text className=" text-lg text-gray-200 -mt-1">Mathura</Text>
+      <Text className=" text-[#232323] font-bold text-xl">GLA University</Text>
+      <Text className="text-[#222525] text-lg -mt-1">Mathura</Text>
     </View>
   )
 }
@@ -39,11 +39,17 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        // tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: "#078080",
+        // tabBarInactiveTintColor: "#222525",
+        tabBarStyle: {
+          backgroundColor: "#fffffe",
+          
+        },
         
         headerTitle: HomeHeader,
         headerStyle: {
-          backgroundColor: "#006400",
+          backgroundColor: "#f8f5f2",
         },
       }}
     >
