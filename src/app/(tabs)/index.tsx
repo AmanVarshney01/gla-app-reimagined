@@ -1,52 +1,36 @@
-import { StyleSheet, Image, View, Text } from 'react-native';
-// import { Image } from 'expo-image';
+import { Image, View, Text, ScrollView} from 'react-native';
+import Animated from 'react-native-reanimated';
 import profile1 from '../../../assets/profile1.json';
+ import {AnimatedCircularProgress} from 'react-native-circular-progress';
 
 export default function HomeScreen() {
 
   const currentProfile = profile1[0];
 
   return (
-    <View style={styles.container}>
-      <View style={styles.profile}>
-        <Image style={styles.profilePhoto} source={require('../../../assets/images/profilephoto.jpg')}/>
-        <View>
-          <Text style={styles.name}>{currentProfile.name}</Text>
-          <Text>{currentProfile.course} - {currentProfile.branch} [ {currentProfile.semester} Sem ] <Text style={{color: 'green'}}>- Registered</Text></Text>        
+      <ScrollView>
+        <View  className='flex p-4 justify-center items-center gap-4'>
+          <View className='flex-row p-4 w-full rounded-xl bg-white shadow shadow-black'>
+            <Image className=' rounded-full aspect-square w-16' source={require('../../../assets/images/profilephoto.jpg')}/>
+            <View>
+              <Text  className=" text-2xl">{currentProfile.name}</Text>
+              <Text>{currentProfile.course} - {currentProfile.branch} [ {currentProfile.semester} Sem ] - {currentProfile.isRegistered ? <Text className=' text-green-600'>Registered</Text>: <Text className=' text-red-600'>Not Registered</Text>}</Text>        
+            </View>
+          </View>
+          <View className='p-4 bg-white rounded-xl shadow shadow-black'>
+            <AnimatedCircularProgress
+              size={95} 
+              fill={currentProfile.attendance}
+              width={7}
+              tintColor="black"
+              backgroundColor="white"
+              rotation={0}
+              lineCap="round"
+              children={(fill) => <Text>{fill}%</Text>}
+            />
+          </View>
         </View>
-      </View>
-      {/* <View style={{width: '100%', height: 100, backgroundColor: 'red'}}></View> */}
-    </View>
+      </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    // justifyContent: 'center',
-    // padding: 10,
-    backgroundColor: 'white',
-  },
-  profile: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    // justifyContent: 'center',
-    gap: 15,
-    marginVertical: 10,
-    backgroundColor: 'white',
-    width: '100%',
-    // borderRadius: 15,
-    padding: 15,
-  },
-  profilePhoto: {
-    width: 80,
-    height: 80,
-    borderRadius: 100,
-  },
-  name: {
-    fontSize: 20,
-    // fontWeight: 'bold',
-  },
-});

@@ -1,12 +1,13 @@
 [
     {
+        "id": 1,
         "name": "Aman Varshney",
         "email": "av.amanvarshney11@gmail.com",
         "phoneNumber": 9267971037,
         "address": "602, tower-7, parsvnath regalia, ghaziabad, up, 201002",
         "bloodGroup": "A+",
         "rollNumber": 2215000198,
-        "isRegistered": true,
+        "isRegistered": false,
         "dateOfBirth": "11/01/2003",
         "category": "GEN",
         "fatherName": "kuldeep gupta",
@@ -15,6 +16,7 @@
         "motherContactNumber": 9000000000,
         "course": "B.Tech",
         "branch": "CSE",
-        "semester": 3
+        "semester": 3,
+        "attendance": 80
     }
 ]

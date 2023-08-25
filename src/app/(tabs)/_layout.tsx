@@ -16,12 +16,22 @@ function TabBarIcon(props: {
 
 function HomeHeader() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>GLA University</Text>
-      <Text style={styles.subtitle}>Mathura</Text>
+    <View className=" ">
+      <Text className=" text-white font-bold text-xl">GLA University</Text>
+      <Text className=" text-lg text-gray-200 -mt-1">Mathura</Text>
     </View>
   )
 }
+// const styles = StyleSheet.create({
+  //   headerTitle: {
+  //     fontSize: 20,
+  //     fontWeight: 'bold',
+  //   },
+  //   headerSubtitle: {
+  //     fontSize: 18,
+  //     marginTop: -4,
+  //   },
+  // });
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -30,18 +40,18 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        
+        headerTitle: HomeHeader,
+        headerStyle: {
+          backgroundColor: "#006400",
+        },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
           title: "Home",
-          headerTitle: HomeHeader,
-          // headerTitleStyle: {
-          //   // fontSize: 20,
-          //   // margin: 50,
-          //   // backgroundColor: 'pink',
-          // },
+          // headerTitle: HomeHeader,
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           // headerRight: () => (
           //   <Link href="/modal" asChild>
@@ -60,17 +70,11 @@ export default function TabLayout() {
           // headerShown: false,
         }}
       />
-      {/* <Tabs.Screen
-        name="two"
-        options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      /> */}
       <Tabs.Screen
         name="Profile"
         options={{
           title: "Profile",
+          // headerTitle: HomeHeader,
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
           // headerShown: false,
         }}
@@ -79,6 +83,7 @@ export default function TabLayout() {
         name="Notifications"
         options={{
           title: "Notifications",
+          headerTitle: HomeHeader,
           tabBarIcon: ({ color }) => <TabBarIcon name="bell" color={color} />,
           // headerShown: false,
         }}
@@ -87,6 +92,7 @@ export default function TabLayout() {
         name="Help"
         options={{
           title: "Help",
+          // headerTitle: HomeHeader,
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="handshake-o" color={color} />
           ),
@@ -97,6 +103,7 @@ export default function TabLayout() {
         name="more"
         options={{
           title: "More",
+          // headerTitle: HomeHeader,
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="bars" color={color} />
           ),
@@ -106,23 +113,3 @@ export default function TabLayout() {
     </Tabs>
   );
 }
-
-
-const styles = StyleSheet.create({
-  container: {
-    // paddingVertical: 16,
-    // paddingHorizontal: 24,
-    // marginTop: 5,
-    flexDirection: 'column',
-    // gap: 1,
-    // backgroundColor: '#006400',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  subtitle: {
-    fontSize: 18,
-    marginTop: -4,
-  },
-});
