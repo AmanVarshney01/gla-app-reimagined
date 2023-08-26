@@ -2,22 +2,9 @@ import { StyleSheet, View, Text } from 'react-native';
 
 export default function MoreScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>More</Text>
+    <View className='bg-[#f8f5f2] flex-1'>
+      <Text>More</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-});
 
