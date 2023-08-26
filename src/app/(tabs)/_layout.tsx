@@ -22,16 +22,13 @@ function HomeHeader() {
     </View>
   )
 }
-// const styles = StyleSheet.create({
-  //   headerTitle: {
-  //     fontSize: 20,
-  //     fontWeight: 'bold',
-  //   },
-  //   headerSubtitle: {
-  //     fontSize: 18,
-  //     marginTop: -4,
-  //   },
-  // });
+function header(title: string) {
+  return (
+    <View>
+        <Text className=" text-[#232323] font-bold text-xl">{title}</Text>
+    </View>
+)
+}
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -82,7 +79,7 @@ export default function TabLayout() {
         name="Profile"
         options={{
           title: "Profile",
-          // headerTitle: HomeHeader,
+          headerTitle: () => header("Profile"),
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
           // headerShown: false,
         }}
@@ -91,7 +88,7 @@ export default function TabLayout() {
         name="Notifications"
         options={{
           title: "Notifications",
-          headerTitle: HomeHeader,
+          headerTitle: () => header("Notifications"),
           tabBarIcon: ({ color }) => <TabBarIcon name="bell" color={color} />,
           // headerShown: false,
         }}
@@ -100,7 +97,7 @@ export default function TabLayout() {
         name="Help"
         options={{
           title: "Help",
-          // headerTitle: HomeHeader,
+          headerTitle: () => header("Help"),
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="handshake-o" color={color} />
           ),
@@ -111,7 +108,7 @@ export default function TabLayout() {
         name="more"
         options={{
           title: "More",
-          // headerTitle: HomeHeader,
+          headerTitle: () => header("More"),
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="bars" color={color} />
           ),
