@@ -5,6 +5,8 @@ import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 import "../../global.css";
+// import 'expo-dev-client';
+
 
 export {
   // Catch any errors thrown by the Layout component.

@@ -106,7 +106,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="more"
+        name="More"
         options={{
           title: "More",
           headerTitle: () => header("More"),

@@ -63,7 +63,14 @@ export default function MoreScreen() {
           <View className="w-10 ml-3">
             <FontAwesome name="road" size={26} color="#222525" />
           </View>
-          <Text className=" text-lg ml-4">Outing Details</Text>
+          <Text className=" text-lg ml-4">Leave/Outing Details</Text>
+        </View>
+        <View className="w-full border-b border-gray-300"></View>
+        <View className=" items-center flex-row w-full my-4 ">
+          <View className="w-10 ml-3">
+            <FontAwesome name="gear" size={26} color="#222525" />
+          </View>
+          <Text className=" text-lg ml-4">Settings</Text>
         </View>
         <View className=" items-center flex-row w-full my-4 ">
           <View className="w-10 ml-3">

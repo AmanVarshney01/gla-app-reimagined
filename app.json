@@ -8,9 +8,9 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/gla1.png",
+      "image": "./assets/images/gla.png",
       "resizeMode": "contain",
-      "backgroundColor": "#f8f5f2"
+      "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
       "**/*"

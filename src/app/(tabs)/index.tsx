@@ -1,5 +1,5 @@
 import { Image, View, Text, ScrollView, FlatList } from "react-native";
-import Animated from "react-native-reanimated";
+// import Animated from "react-native-reanimated";
 import profile1 from "../../../assets/data/profile1.json";
 import news from "../../../assets/data/news.json";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
