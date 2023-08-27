@@ -45,10 +45,11 @@ export default function TabLayout() {
           borderTopColor: "#232323",
           borderTopWidth: 1,
         },
-        
         headerTitle: HomeHeader,
         headerStyle: {
           backgroundColor: "#f8f5f2",
+          // borderBottomWidth: 1,
+          shadowColor: "gray",
         },
       }}
     >
