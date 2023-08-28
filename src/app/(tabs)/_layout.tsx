@@ -17,15 +17,15 @@ function TabBarIcon(props: {
 function HomeHeader() {
   return (
     <View className=" ">
-      <Text className=" text-[#232323] font-bold text-xl">GLA University</Text>
-      <Text className="text-[#222525] text-lg -mt-1">Mathura</Text>
+      <Text className=" text-[#fffffe] font-bold text-xl">GLA University</Text>
+      <Text className="text-[#fffffe] text-lg -mt-1">Mathura</Text>
     </View>
   )
 }
 function header(title: string) {
   return (
     <View>
-        <Text className=" text-[#232323] font-bold text-xl">{title}</Text>
+        <Text className=" text-[#fffffe] font-bold text-xl">{title}</Text>
     </View>
 )
 }
@@ -43,11 +43,14 @@ export default function TabLayout() {
         tabBarStyle: {
           backgroundColor: "#fffffe",
           borderTopColor: "#232323",
+          borderBottomWidth: 0,
           borderTopWidth: 1,
+          height: 58,
+          paddingBottom: 8,
         },
         headerTitle: HomeHeader,
         headerStyle: {
-          backgroundColor: "#f8f5f2",
+          backgroundColor: "#026c45",
           // borderBottomWidth: 1,
           shadowColor: "gray",
         },
