@@ -6,8 +6,8 @@ export default function ProfileScreen() {
   return (
     <ScrollView className='bg-[#f8f5f2]'>
       <View className='flex-1'>
-        <View className='w-full justify-center items-center'>
-          <Image className=' w-36 h-36 rounded-full ' source={require("../../../assets/images/profilephoto.jpg")} />
+        <View className='w-full justify-center items-center p-4'>
+          <Image className=' w-32 h-32 rounded-full ' source={require("../../../assets/images/profilephoto.jpg")} />
         </View>
       </View>
     </ScrollView>
