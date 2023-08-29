@@ -17,6 +17,10 @@
         "course": "B.Tech",
         "branch": "CSE",
         "semester": 3,
-        "attendance": 80
+        "attendance": 80,
+        "section": "L",
+        "classRollNo": 10,
+        "hostelName": "I-Block",
+        "hostelRoomNo": 1026
     }
 ]

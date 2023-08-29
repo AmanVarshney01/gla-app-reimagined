@@ -4,6 +4,8 @@ import profile1 from "../../../assets/data/profile1.json";
 import news from "../../../assets/data/news.json";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import TimetableCard from "@/components/TimetableCard";
+import timetableData from "../../../assets/data/timetable.json";
 
 // function QuickLinkIcon(name:  React.ComponentProps<typeof FontAwesome>["name"], title: string) {
 //   return (
@@ -60,8 +62,8 @@ export default function HomeScreen() {
             <View className="flex-1">
               <Text className="text-text text-xs">Upcoming Class</Text>
               <View className=" my-2">
-                <Text className=" text-lg text-text ">BCSC 1010 (Theory)</Text>
-                <Text className="text-sm -mt-1 mb-2 text-text">Discrete Mathematic</Text>
+                <Text className=" text-lg text-text leading-[20px] mb-1">Discrete Mathematic</Text>
+                <Text className="text-sm -mt-1 mb-3 text-text">BCSC 1010 (Theory)</Text>
                 <View className="flex-row border rounded-lg justify-evenly divide-x">
                   <View className="">
                     <Text className="text-text text-xs text-center px-2">
@@ -131,8 +133,20 @@ export default function HomeScreen() {
           <View className="border-b pb-2">
             <Text className="text-lg font-base">Today's Timetable</Text>
           </View>
-          <View className="py-4 w-full ">
-            
+          <View className="pt-4 w-full ">
+            {timetableData.map((item, index) => (
+              <TimetableCard
+                key={index}
+                subject={item.subject}
+                teacher={item.teacher}
+                room={item.room}
+                block={item.block}
+                time={item.time}
+                subjectCode={item.subjectCode}
+                classType={item.classType}
+                isPresent={item.isPresent}
+              />
+            ))}
           </View>
         </View>
       </View>
