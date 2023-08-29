@@ -65,7 +65,7 @@ export default function MoreScreen() {
           </View>
           <Text className=" text-lg ml-4 text-heading">Leave/Outing Details</Text>
         </View>
-        <View className="w-full border-b border-gray-300"></View>
+        <View className="w-full border-b border-b-stroke/10"></View>
         <View className=" items-center flex-row w-full my-4 ">
           <View className="w-14 items-center">
             <FontAwesome name="gear" size={26} color="#222525" />

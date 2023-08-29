@@ -4,10 +4,10 @@
         "teacher": "Ankur Sisodia",
         "room": "323",
         "block": "AB-VIII",
-        "time": "9:00-10:00",
+        "time": "9:00 AM - 10:00 AM",
         "subjectCode": "BCSC 1010",
         "classType": "Lecture",
-        "isPresent": true
+        "attendance": "Present"
 
     },
     {
@@ -15,9 +15,19 @@
         "teacher": "Mirza Adam",
         "room": "317",
         "block": "AB-VIII",
-        "time": "10:00-11:00",
+        "time": "10:00 AM - 11:00 AM",
         "subjectCode": "BELH 1003",
         "classType": "Lecture",
-        "isPresent": false
+        "attendance": "Absent"
+    },
+    {
+        "subject": "Object Oriented Programming",
+        "teacher": "Sandeep Kumar Chhoker",
+        "room": "326",
+        "block": "AB-VIII",
+        "time": "1:00 PM - 2:00 PM",
+        "subjectCode": "BCSC 1002", 
+        "classType": "Tutorial",
+        "attendance": "N/A"
     }
 ]

@@ -22,24 +22,28 @@ export default function HomeScreen() {
   return (
     <ScrollView className="bg-background" showsVerticalScrollIndicator={false}>
       <View className="p-2 justify-center items-center">
-        <View className="flex-row p-4 w-full rounded-lg bg-white shadow shadow-black mb-3 border border-stroke">
+        <View className="flex-row p-4 w-full items-center rounded-lg bg-white shadow shadow-black mb-3 border border-stroke">
           <Image
-            className=" rounded-full aspect-square w-14 mr-4"
+            className=" rounded-full aspect-square w-16 mr-4"
             source={require("../../../assets/images/profilephoto.jpg")}
           />
           <View>
-            <Text className="text-heading text-2xl">
-              {currentProfile.name}
-            </Text>
+            <Text className="text-heading text-2xl">{currentProfile.name}</Text>
             <Text className="text-text">
               {currentProfile.course} - {currentProfile.branch} [{" "}
-              {currentProfile.semester} Sem ] -{" "}
-              {currentProfile.isRegistered ? (
-                <Text className=" text-primary">Registered</Text>
-              ) : (
-                <Text className=" text-secondary">Not Registered</Text>
-              )}
+              {currentProfile.semester} Sem ]
             </Text>
+            <View className="w-full">
+              <Text>
+                Sec - {currentProfile.section} ({currentProfile.classRollNo}) -{" "}
+                {currentProfile.isRegistered ? (
+                  <Text className=" text-primary">Registered</Text>
+                ) : (
+                  <Text className=" text-secondary">Not Registered</Text>
+                )}
+              </Text>
+              {/* <Text>Roll No. - {currentProfile.classRollNo}</Text> */}
+            </View>
           </View>
         </View>
         <View className="flex-row w-full">
@@ -62,8 +66,12 @@ export default function HomeScreen() {
             <View className="flex-1">
               <Text className="text-text text-xs">Upcoming Class</Text>
               <View className=" my-2">
-                <Text className=" text-lg text-text leading-[20px] mb-1">Discrete Mathematic</Text>
-                <Text className="text-sm -mt-1 mb-3 text-text">BCSC 1010 (Theory)</Text>
+                <Text className=" text-lg text-text leading-[20px] mb-1">
+                  Discrete Mathematics
+                </Text>
+                <Text className="text-sm -mt-1 mb-3 text-text">
+                  BCSC 1010 (Theory)
+                </Text>
                 <View className="flex-row border rounded-lg justify-evenly divide-x">
                   <View className="">
                     <Text className="text-text text-xs text-center px-2">
@@ -72,12 +80,12 @@ export default function HomeScreen() {
                   </View>
                   <View className="flex-1">
                     <Text className="text-text text-xs text-center px-1">
-                      14:00-15:00
+                      AB-8 311
                     </Text>
                   </View>
                   <View className="flex-1">
                     <Text className="text-text text-xs text-center px-1">
-                      AB-8 311
+                      14:00-15:00
                     </Text>
                   </View>
                 </View>
@@ -144,7 +152,7 @@ export default function HomeScreen() {
                 time={item.time}
                 subjectCode={item.subjectCode}
                 classType={item.classType}
-                isPresent={item.isPresent}
+                attendance={item.attendance}
               />
             ))}
           </View>
