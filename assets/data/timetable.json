@@ -21,13 +21,33 @@
         "attendance": "Absent"
     },
     {
-        "subject": "Object Oriented Programming",
-        "teacher": "Sandeep Kumar Chhoker",
-        "room": "326",
+        "subject": "Computer Organization",
+        "teacher": "Steve Jobs",
+        "room": "323",
         "block": "AB-VIII",
+        "time": "11:00 AM - 12:00 PM",
+        "subjectCode": "BCSC 1005",
+        "classType": "Lecture",
+        "attendance": "Present"
+    },
+    {
+        "subject": "Object Oriented Programming Lab",
+        "teacher": "Sandeep Kumar Chhoker",
+        "room": "405",
+        "block": "AB-I",
         "time": "1:00 PM - 2:00 PM",
-        "subjectCode": "BCSC 1002", 
-        "classType": "Tutorial",
+        "subjectCode": "BCSC 0801", 
+        "classType": "Lab",
+        "attendance": "N/A"
+    },
+    {
+        "subject": "Object Oriented Programming Lab",
+        "teacher": "Sandeep Kumar Chhoker",
+        "room": "405",
+        "block": "AB-I",
+        "time": "2:00 PM - 3:00 PM",
+        "subjectCode": "BCSC 0801", 
+        "classType": "Lab",
         "attendance": "N/A"
     }
 ]

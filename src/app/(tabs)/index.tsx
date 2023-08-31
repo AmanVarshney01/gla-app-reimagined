@@ -22,7 +22,7 @@ export default function HomeScreen() {
   return (
     <ScrollView className="bg-background" showsVerticalScrollIndicator={false}>
       <View className="p-2 justify-center items-center">
-        <View className="flex-row p-4 w-full items-center rounded-lg bg-white shadow shadow-black mb-3 border border-stroke">
+        <View className="flex-row p-4 w-full items-center rounded-lg bg-white shadow shadow-stroke mb-3 boder border-stroke">
           <Image
             className=" rounded-full aspect-square w-16 mr-4"
             source={require("../../../assets/images/profilephoto.jpg")}
@@ -47,7 +47,7 @@ export default function HomeScreen() {
           </View>
         </View>
         <View className="flex-row w-full">
-          <View className="p-4 border border-stroke bg-white rounded-lg shadow shadow-black items-center mr-2">
+          <View className="p-4 brder border-stroke bg-white rounded-lg shadow shadow-stroke items-center mr-2">
             <AnimatedCircularProgress
               size={95}
               fill={currentProfile.attendance}
@@ -62,7 +62,7 @@ export default function HomeScreen() {
             />
             <Text className="mt-2 text-text text-base">Attendance</Text>
           </View>
-          <View className="rounded-lg flex-1 p-2 bg-white border border-stroke shadow shadow-black">
+          <View className="rounded-lg flex-1 p-2 bg-white boder border-stroke shadow shadow-stroke">
             <View className="flex-1">
               <Text className="text-text text-xs">Upcoming Class</Text>
               <View className=" my-2">
@@ -97,7 +97,7 @@ export default function HomeScreen() {
             </View>
           </View>
         </View>
-        <View className="w-full bg-white border border-stroke shadow shadow-black rounded-lg mt-3 p-1">
+        <View className="w-full bg-white boder border-stroke shadow shadow-stroke rounded-lg mt-3 p-1">
           <FlatList
             data={news}
             horizontal
@@ -116,7 +116,7 @@ export default function HomeScreen() {
           />
         </View>
         <View className="w-full flex-row mt-3">
-          <View className="mr-2 p-2 bg-white border border-[#232323] shadow shadow-black rounded-lg ">
+          <View className="mr-2 p-2 bg-white brder border-[#232323] shadow shadow-stroke rounded-lg ">
             <View className="mb-2">
               <Text className="text-3xl text-heading">3</Text>
               <Text className="text-text text-base">Assignments due</Text>
@@ -126,7 +126,7 @@ export default function HomeScreen() {
               <FontAwesome name="arrow-right" size={18} color="#078080" />
             </View>
           </View>
-          <View className="flex-1 p-2 bg-white border border-stroke shadow shadow-black rounded-lg ">
+          <View className="flex-1 p-2 bg-white borer border-stroke shadow shadow-stroke rounded-lg ">
             <View className="mb-2">
               <Text className="text-3xl text-heading">93.50%</Text>
               <Text className="text-heading text-base">Percentage</Text>
@@ -137,11 +137,11 @@ export default function HomeScreen() {
             </View>
           </View>
         </View>
-        <View className="w-full mt-3 bg-white border border-stroke shadow shadow-black rounded-lg p-2">
-          <View className="border-b pb-2">
+        <View className="w-full mt-3 bg-white brder border-stroke shadow shadow-stroke rounded-lg p-2">
+          <View className="border-b border-stroke pb-2">
             <Text className="text-lg font-base">Today's Timetable</Text>
           </View>
-          <View className="pt-4 w-full ">
+          <View className="pt-2 w-full ">
             {timetableData.map((item, index) => (
               <TimetableCard
                 key={index}

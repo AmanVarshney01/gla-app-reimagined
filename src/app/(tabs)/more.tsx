@@ -4,8 +4,8 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 export default function MoreScreen() {
   return (
     <ScrollView className=" bg-background" showsVerticalScrollIndicator={false}>
-      <View className="flex-1 p-2 w-full">
-        <View className=" items-center flex-row w-full my-4 ">
+      <View className="flex-1 p-2 w-full bg-white">
+        <View className=" items-center flex-row w-full my-4">
           <View className="w-14 items-center">
             <FontAwesome name="address-book" size={26} color="#222525" />
           </View>
