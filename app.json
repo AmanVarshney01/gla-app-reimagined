@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "gla-app-reimagined",
+    "name": "GLA University",
     "slug": "gla-app-reimagined",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/glaLogo.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -20,7 +20,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/glaLogo.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.amanvarshney11.glaappreimagined"

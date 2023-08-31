@@ -1,7 +1,7 @@
 [
     {
         "subject": "Discrete Mathematics",
-        "teacher": "Ankur Sisodia",
+        "teacher": "Aryabhata",
         "room": "323",
         "block": "AB-VIII",
         "time": "9:00 AM - 10:00 AM",
@@ -12,7 +12,7 @@
     },
     {
         "subject": "English For Professional Porposes - I",
-        "teacher": "Mirza Adam",
+        "teacher": "Shakespeare",
         "room": "317",
         "block": "AB-VIII",
         "time": "10:00 AM - 11:00 AM",
@@ -32,7 +32,7 @@
     },
     {
         "subject": "Object Oriented Programming Lab",
-        "teacher": "Sandeep Kumar Chhoker",
+        "teacher": "Linus Torvalds",
         "room": "405",
         "block": "AB-I",
         "time": "1:00 PM - 2:00 PM",
@@ -42,7 +42,7 @@
     },
     {
         "subject": "Object Oriented Programming Lab",
-        "teacher": "Sandeep Kumar Chhoker",
+        "teacher": "Linus Torvalds",
         "room": "405",
         "block": "AB-I",
         "time": "2:00 PM - 3:00 PM",

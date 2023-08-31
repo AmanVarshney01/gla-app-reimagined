@@ -142,19 +142,19 @@ export default function HomeScreen() {
             <Text className="text-lg font-base">Today's Timetable</Text>
           </View>
           <View className="pt-2 w-full ">
-            {timetableData.map((item, index) => (
+            {timetableData[0] ? timetableData.map((item, index) => (
               <TimetableCard
                 key={index}
-                subject={item.subject}
-                teacher={item.teacher}
-                room={item.room}
-                block={item.block}
-                time={item.time}
-                subjectCode={item.subjectCode}
-                classType={item.classType}
-                attendance={item.attendance}
+                subject={item["subject"]}
+                teacher={item["teacher"]}
+                room={item["room"]}
+                block={item["block"]}
+                time={item["time"]}
+                subjectCode={item["subjectCode"]}
+                classType={item["classType"]}
+                attendance={item["attendance"]}
               />
-            ))}
+            )) : <Text className=" text-secondary">No Timetable Found</Text>}
           </View>
         </View>
       </View>
