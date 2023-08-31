@@ -7,14 +7,6 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import TimetableCard from "@/components/TimetableCard";
 import timetableData from "../../../assets/data/timetable.json";
 
-// function QuickLinkIcon(name:  React.ComponentProps<typeof FontAwesome>["name"], title: string) {
-//   return (
-//     <View className=" items-center justify-center">
-//       <FontAwesome name={name} size={24} color="#222525"/>
-//       <Text>{title}</Text>
-//     </View>
-//   )
-// }
 
 export default function HomeScreen() {
   const currentProfile = profile1[0];
