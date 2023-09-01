@@ -1,5 +1,7 @@
-import { StyleSheet, View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { Link } from "expo-router";
+// import { SparklesIcon as SparklesIconOutline } from 'react-native-heroicons/outline'
 
 export default function MoreScreen() {
   return (
@@ -8,6 +10,8 @@ export default function MoreScreen() {
         <View className=" items-center flex-row w-full my-4">
           <View className="w-14 items-center">
             <FontAwesome name="address-book" size={26} color="#222525" />
+            {/* <SparklesIconOutline color="red" size={42} fill={"black"} /> */}
+
           </View>
           <Text className=" text-lg ml-4 text-heading">Attendance</Text>
         </View>
@@ -66,12 +70,14 @@ export default function MoreScreen() {
           <Text className=" text-lg ml-4 text-heading">Leave/Outing Details</Text>
         </View>
         <View className="w-full border-b border-b-stroke/10"></View>
-        <View className=" items-center flex-row w-full my-4 ">
+
+        <Link href="/Settings" className=" items-center flex-row w-full my-4 ">
           <View className="w-14 items-center">
             <FontAwesome name="gear" size={26} color="#222525" />
           </View>
           <Text className=" text-lg ml-4 text-heading">Settings</Text>
-        </View>
+        </Link>
+
         <View className=" items-center flex-row w-full my-4 ">
           <View className="w-14 items-center">
             <FontAwesome name="sign-out" size={26} color="#222525" />

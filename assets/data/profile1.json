@@ -10,9 +10,9 @@
         "isRegistered": true,
         "dateOfBirth": "11/01/2003",
         "category": "GEN",
-        "fatherName": "kuldeep gupta",
+        "fatherName": "Kuldeep Gupta",
         "fatherContactNumber": 9000000000,
-        "motherName": "rakhi gupta",
+        "motherName": "Rakhi Gupta",
         "motherContactNumber": 9000000000,
         "course": "B.Tech",
         "branch": "CSE",
@@ -20,7 +20,7 @@
         "attendance": 80,
         "section": "L",
         "classRollNo": 10,
-        "hostelName": "I-Block",
+        "hostelName": "Sarvapalli Radha Krishnan",
         "hostelRoomNo": 1026
     }
 ]

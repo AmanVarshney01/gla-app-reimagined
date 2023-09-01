@@ -1,4 +1,4 @@
-import { Image, View, Text, ScrollView, FlatList } from "react-native";
+import { Image, View, Text, ScrollView, FlatList, Pressable } from "react-native";
 // import Animated from "react-native-reanimated";
 import profile1 from "../../../assets/data/profile1.json";
 import news from "../../../assets/data/news.json";
@@ -6,15 +6,17 @@ import { AnimatedCircularProgress } from "react-native-circular-progress";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import TimetableCard from "@/components/TimetableCard";
 import timetableData from "../../../assets/data/timetable.json";
+import { useColorScheme } from "nativewind";
 
 
 export default function HomeScreen() {
   const currentProfile = profile1[0];
+  const { colorScheme, toggleColorScheme } = useColorScheme();
 
   return (
     <ScrollView className="bg-background" showsVerticalScrollIndicator={false}>
       <View className="p-2 justify-center items-center">
-        <View className="flex-row p-4 w-full items-center rounded-lg bg-white shadow shadow-stroke mb-3 boder border-stroke">
+        <View className="flex-row p-4 w-full items-center rounded-lg bg-white shadow shadow-stroke mb-3 boder dark:border border-stroke">
           <Image
             className=" rounded-full aspect-square w-16 mr-4"
             source={require("../../../assets/images/profilephoto.jpg")}
@@ -134,19 +136,31 @@ export default function HomeScreen() {
             <Text className="text-lg font-base">Today's Timetable</Text>
           </View>
           <View className="pt-2 w-full ">
-            {timetableData[0] ? timetableData.map((item, index) => (
-              <TimetableCard
-                key={index}
-                subject={item["subject"]}
-                teacher={item["teacher"]}
-                room={item["room"]}
-                block={item["block"]}
-                time={item["time"]}
-                subjectCode={item["subjectCode"]}
-                classType={item["classType"]}
-                attendance={item["attendance"]}
-              />
-            )) : <Text className=" text-secondary">No Timetable Found</Text>}
+            {/* {timetable.length > 0 ? (
+              timetable.map((item, index) => (
+                <TimetableCard
+                  key={index}
+                  subject={item["subject"]}
+                  teacher={item["teacher"]}
+                  room={item["room"]}
+                  block={item["block"]}
+                  time={item["time"]}
+                  subjectCode={item["subjectCode"]}
+                  classType={item["classType"]}
+                  attendance={item["attendance"]}
+                />
+              ))
+            ) : (
+              <Text className=" text-secondary">No Timetable Found</Text>
+            )} */}
+            <FlatList scrollEnabled={false} data={timetableData} renderItem={({item}) => <TimetableCard subject={item["subject"]}
+                  teacher={item["teacher"]}
+                  room={item["room"]}
+                  block={item["block"]}
+                  time={item["time"]}
+                  subjectCode={item["subjectCode"]}
+                  classType={item["classType"]}
+                  attendance={item["attendance"]}  />} />
           </View>
         </View>
       </View>
