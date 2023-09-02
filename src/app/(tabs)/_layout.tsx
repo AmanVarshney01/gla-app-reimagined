@@ -53,7 +53,7 @@ export default function TabLayout() {
         headerStyle: {
           backgroundColor: "#026c45",
           // borderBottomWidth: 1,
-          shadowColor: "gray",
+          shadowColor: "pink",
         },
       }}
     >

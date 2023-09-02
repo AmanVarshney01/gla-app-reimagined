@@ -8,6 +8,7 @@ import TimetableCard from "@/components/TimetableCard";
 import timetableData from "../../../assets/data/timetable.json";
 import { useColorScheme } from "nativewind";
 import { ChevronRightIcon } from "react-native-heroicons/solid";
+import { Link } from "expo-router";
 
 
 export default function HomeScreen() {
@@ -62,35 +63,37 @@ export default function HomeScreen() {
               <Text className="text-text text-xs">Upcoming Class</Text>
               <View className=" my-2">
                 <Text className=" text-lg text-text leading-[20px] mb-1">
-                  Discrete Mathematics
+                  Object Oriented Programming Lab
                 </Text>
                 <Text className="text-sm -mt-1 mb-3 text-text">
-                  BCSC 1010 (Theory)
+                  BCSC 0801
                 </Text>
                 <View className="flex-row border rounded-lg justify-evenly divide-x">
-                  <View className="">
+                  {/* <View className="">
                     <Text className="text-text text-xs text-center px-2">
                       Thu
                     </Text>
-                  </View>
+                  </View> */}
                   <View className="flex-1">
                     <Text className="text-text text-xs text-center px-1">
-                      AB-8 311
+                      AB-VIII 311
                     </Text>
                   </View>
                   <View className="flex-1">
                     <Text className="text-text text-xs text-center px-1">
-                      14:00-15:00
+                      1:00PM-2:00PM
                     </Text>
                   </View>
                 </View>
               </View>
             </View>
-            <View className="border-t pt-1 flex-row justify-between items-center">
+            <Link href="/Timetable" asChild>
+            <Pressable className="border-t pt-1 flex-row justify-between items-center">
               <Text className="text-primary">View</Text>
               {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
               <ChevronRightIcon color="#078080" size={18} />
-            </View>
+            </Pressable>
+            </Link>
           </View>
         </View>
         <View className="w-full bg-white boder border-stroke shadow shadow-stroke rounded-lg mt-3 p-1">

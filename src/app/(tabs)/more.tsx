@@ -29,6 +29,8 @@ export default function MoreScreen() {
           </View>
           <Text className=" text-lg ml-4 text-heading">Result</Text>
         </View>
+
+        <Link href="/Timetable">jjj</Link>
         <View className=" items-center flex-row w-full my-4 ">
           <View className="w-14 items-center">
             {/* <FontAwesome name="calendar" size={26} color="#222525" /> */}
@@ -36,6 +38,8 @@ export default function MoreScreen() {
           </View>
           <Text className=" text-lg ml-4 text-heading">TimeTable</Text>
         </View>
+
+
         <View className=" items-center flex-row w-full my-4 ">
           <View className="w-14 items-center">
             {/* <FontAwesome name="money" size={26} color="#222525" /> */}

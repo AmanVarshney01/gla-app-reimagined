@@ -45,11 +45,18 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-
   return (
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: "modal" }} />
-      </Stack>
+    <Stack
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "#026c45",
+        },
+        headerTintColor: "#fffffe",
+      }}
+    >
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      {/* <Stack.Screen name="modal" options={{ presentation: "modal" }} /> */}
+      <Stack.Screen name="Settings" />
+    </Stack>
   );
 }
