@@ -1,17 +1,18 @@
-import FontAwesome from "@expo/vector-icons/FontAwesome";
+// import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link, Tabs } from "expo-router";
 import { Pressable, useColorScheme } from "react-native";
 import { StyleSheet, View, Text } from "react-native";
+import { HomeIcon, BellIcon, PhoneIcon, Bars3Icon, UserIcon } from "react-native-heroicons/solid";
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>["name"];
-  color: string;
-}) {
-  return <FontAwesome size={26} style={{ marginBottom: -3 }} {...props} />;
-}
+// function TabBarIcon(props: {
+//   name: React.ComponentProps<typeof FontAwesome>["name"];
+//   color: string;
+// }) {
+//   return <FontAwesome size={26} style={{ marginBottom: -3 }} {...props} />;
+// }
 
 function HomeHeader() {
   return (
@@ -61,7 +62,8 @@ export default function TabLayout() {
         options={{
           title: "Home",
           // headerTitle: HomeHeader,
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          // tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          tabBarIcon: ({ color }) => <HomeIcon color={color} size={26} />,
           // headerRight: () => (
           //   <Link href="/modal" asChild>
           //     <Pressable>
@@ -84,7 +86,8 @@ export default function TabLayout() {
         options={{
           title: "Profile",
           headerTitle: () => header("Profile"),
-          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          // tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          tabBarIcon: ({ color }) => <UserIcon color={color} size={26} />,
           // headerShown: false,
         }}
       />
@@ -93,7 +96,8 @@ export default function TabLayout() {
         options={{
           title: "Notifications",
           headerTitle: () => header("Notifications"),
-          tabBarIcon: ({ color }) => <TabBarIcon name="bell" color={color} />,
+          // tabBarIcon: ({ color }) => <TabBarIcon name="bell" color={color} />,
+          tabBarIcon: ({ color }) => <BellIcon color={color} size={26} />,
           // headerShown: false,
         }}
       />
@@ -102,9 +106,10 @@ export default function TabLayout() {
         options={{
           title: "Help",
           headerTitle: () => header("Help"),
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="handshake-o" color={color} />
-          ),
+          // tabBarIcon: ({ color }) => (
+          //   <TabBarIcon name="handshake-o" color={color} />
+          // ),
+          tabBarIcon: ({ color }) => <PhoneIcon color={color} size={26} />,
           // headerShown: false,
         }}
       />
@@ -113,9 +118,10 @@ export default function TabLayout() {
         options={{
           title: "More",
           headerTitle: () => header("More"),
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="bars" color={color} />
-          ),
+          // tabBarIcon: ({ color }) => (
+          //   <TabBarIcon name="bars" color={color} />
+          // ),
+          tabBarIcon: ({ color }) => <Bars3Icon color={color} size={26} />,
           // headerShown: false,
         }}
       />

@@ -3,10 +3,11 @@ import { Image, View, Text, ScrollView, FlatList, Pressable } from "react-native
 import profile1 from "../../../assets/data/profile1.json";
 import news from "../../../assets/data/news.json";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
+// import FontAwesome from "@expo/vector-icons/FontAwesome";
 import TimetableCard from "@/components/TimetableCard";
 import timetableData from "../../../assets/data/timetable.json";
 import { useColorScheme } from "nativewind";
+import { ChevronRightIcon } from "react-native-heroicons/solid";
 
 
 export default function HomeScreen() {
@@ -87,7 +88,8 @@ export default function HomeScreen() {
             </View>
             <View className="border-t pt-1 flex-row justify-between items-center">
               <Text className="text-primary">View</Text>
-              <FontAwesome name="arrow-right" size={18} color="#078080" />
+              {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
+              <ChevronRightIcon color="#078080" size={18} />
             </View>
           </View>
         </View>
@@ -99,11 +101,12 @@ export default function HomeScreen() {
             // keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
               <View className="flex-row items-center">
-                <FontAwesome
+                {/* <FontAwesome
                   name="circle"
                   size={10}
                   color="#FF934F"
-                ></FontAwesome>
+                ></FontAwesome> */}
+                <View className="w-2 h-2 rounded-full bg-yellow"></View>
                 <Text className="mx-2">{item.title}</Text>
               </View>
             )}
@@ -117,7 +120,8 @@ export default function HomeScreen() {
             </View>
             <View className="border-t pt-1 flex-row justify-between items-center">
               <Text className="text-primary">View</Text>
-              <FontAwesome name="arrow-right" size={18} color="#078080" />
+              {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
+              <ChevronRightIcon color="#078080" size={18} />
             </View>
           </View>
           <View className="flex-1 p-2 bg-white borer border-stroke shadow shadow-stroke rounded-lg ">
@@ -127,7 +131,8 @@ export default function HomeScreen() {
             </View>
             <View className="border-t pt-1 flex-row justify-between items-center">
               <Text className="text-primary">View</Text>
-              <FontAwesome name="arrow-right" size={18} color="#078080" />
+              {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
+              <ChevronRightIcon color="#078080" size={18} />
             </View>
           </View>
         </View>
