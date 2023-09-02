@@ -53,7 +53,7 @@ export default function HomeScreen() {
               backgroundColor="#f8f5f2"
               rotation={0}
               lineCap="round"
-              children={(fill) => <Text className="text-lg">{fill}%</Text>}
+              children={(fill) => <Text className="text-lg">{Math.round(fill)}%</Text>}
             />
             <Text className="mt-2 text-text text-base">Attendance</Text>
           </View>
