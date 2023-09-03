@@ -28,21 +28,21 @@ export default function HomeScreen() {
 
   return (
     <ScrollView
-      className="bg-background"
+      className="bg-background dark:bg-background-dark"
       showsVerticalScrollIndicator={false}
       refreshControl={
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
       }
     >
       <View className="p-2 justify-center items-center">
-        <View className="flex-row p-4 w-full items-center rounded-lg bg-white shadow shadow-stroke mb-3 boder border-stroke">
+        <View className="flex-row p-4 w-full items-center rounded-lg bg-white dark:bg-white-dark shadow shadow-stroke mb-3">
           <Image
             className=" rounded-full aspect-square w-16 mr-4"
             source={require("../../../assets/images/profilephoto.jpg")}
           />
           <View>
-            <Text className="text-heading text-2xl">{currentProfile.name}</Text>
-            <Text className="text-text">
+            <Text className="text-heading dark:text-heading-dark text-2xl">{currentProfile.name}</Text>
+            <Text className="text-text dark:text-text-dark">
               {currentProfile.course} - {currentProfile.branch} [{" "}
               {currentProfile.semester} Sem ]
             </Text>
@@ -61,7 +61,7 @@ export default function HomeScreen() {
         </View>
         <View className="flex-row">
           <Link href="/Attendance" asChild>
-            <Pressable className="p-4 brder border-stroke bg-white rounded-lg shadow shadow-stroke items-center mr-2 justify-between">
+            <Pressable className="p-4 bg-white dark:bg-white-dark rounded-lg shadow shadow-stroke items-center mr-2 justify-between">
               <AnimatedCircularProgress
                 size={95}
                 fill={currentProfile.attendance}
@@ -77,14 +77,14 @@ export default function HomeScreen() {
                   <Text className="text-lg">{Math.round(fill)}%</Text>
                 )}
               />
-              <Text className="mt-2 text-text text-base">Attendance</Text>
+              <Text className="mt-2 text-text dark:text-text-dark text-base">Attendance</Text>
             </Pressable>
           </Link>
-          <View className="rounded-lg flex-1 p-2 bg-white boder border-stroke shadow shadow-stroke">
+          <View className="rounded-lg flex-1 p-2 bg-white dark:bg-white-dark boder border-stroke shadow shadow-stroke">
             <View className="flex-1">
               <Text className="text-text text-xs">Upcoming Class</Text>
               <View className=" my-2">
-                <Text className=" text-lg text-text leading-[20px] mb-1">
+                <Text className=" text-lg text-text dark:text-text-dark leading-[20px] mb-1">
                   Object Oriented Programming Lab
                 </Text>
                 <Text className="text-sm -mt-1 mb-3 text-text">BCSC 0801</Text>
@@ -95,12 +95,12 @@ export default function HomeScreen() {
                     </Text>
                   </View> */}
                   <View className="px-2">
-                    <Text className="text-text text-xs text-center">
+                    <Text className="text-text dark:text-text-dark text-xs text-center">
                       AB-VIII 311
                     </Text>
                   </View>
                   <View className="flex-1 px-1">
-                    <Text className="text-text text-xs text-center">
+                    <Text className="text-text dark:text-text-dark text-xs text-center">
                       1:00 PM - 2:00 PM
                     </Text>
                   </View>
@@ -116,7 +116,7 @@ export default function HomeScreen() {
             </Link>
           </View>
         </View>
-        <View className="w-full bg-white boder border-stroke shadow shadow-stroke rounded-lg mt-3 p-1">
+        <View className="w-full bg-white dark:bg-white-dark shadow shadow-stroke rounded-lg mt-3 p-1">
           <FlatList
             data={news}
             horizontal
@@ -136,10 +136,10 @@ export default function HomeScreen() {
           />
         </View>
         <View className="w-full flex-row mt-3">
-          <View className="mr-2 p-2 bg-white brder border-[#232323] shadow shadow-stroke rounded-lg ">
+          <View className="mr-2 p-2 bg-white dark:bg-white-dark shadow shadow-stroke rounded-lg ">
             <View className="mb-2">
-              <Text className="text-3xl text-heading">3</Text>
-              <Text className="text-text text-base">Assignments due</Text>
+              <Text className="text-3xl text-heading dark:text-heading-dark">3</Text>
+              <Text className="text-text dark:text-text-dark text-base">Assignments due</Text>
             </View>
             <Link href="/Assignments" asChild>
               <Pressable className="border-t pt-1 flex-row justify-between items-center active:bg-background">

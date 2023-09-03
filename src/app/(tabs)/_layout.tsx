@@ -37,8 +37,9 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         // tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-        tabBarActiveTintColor: "#026c45",
-        // tabBarShowLabel: false,
+        tabBarActiveTintColor: "#fffffe",
+        tabBarActiveBackgroundColor: "#078080",
+        tabBarShowLabel: false,
         // tabBarInactiveTintColor: "gray",
         tabBarStyle: {
           backgroundColor: "#fffffe",
@@ -46,14 +47,21 @@ export default function TabLayout() {
           borderBottomWidth: 0,
           // borderTopWidth: 1,
           height: 58,
-          paddingTop: 4,
+          paddingTop: 10,
           paddingBottom: 8,
+          paddingHorizontal: 8,
+        },
+        tabBarItemStyle: {
+          borderRadius: 100,
+          // borderWidth: 1,
+          marginHorizontal: 10,
+
         },
         headerTitle: HomeHeader,
         headerStyle: {
           backgroundColor: "#026c45",
           // borderBottomWidth: 1,
-          shadowColor: "pink",
+          // shadowColor: "pink",
         },
       }}
     >
