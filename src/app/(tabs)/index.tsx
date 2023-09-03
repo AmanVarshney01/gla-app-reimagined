@@ -1,19 +1,24 @@
-import { Image, View, Text, ScrollView, FlatList, Pressable } from "react-native";
+import {
+  Image,
+  View,
+  Text,
+  ScrollView,
+  FlatList,
+  Pressable,
+} from "react-native";
 // import Animated from "react-native-reanimated";
 import profile1 from "../../../assets/data/profile1.json";
 import news from "../../../assets/data/news.json";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
-// import FontAwesome from "@expo/vector-icons/FontAwesome";
 import TimetableCard from "@/components/TimetableCard";
 import timetableData from "../../../assets/data/timetable.json";
-import { useColorScheme } from "nativewind";
+// import { useColorScheme } from "nativewind";
 import { ChevronRightIcon } from "react-native-heroicons/solid";
 import { Link } from "expo-router";
 
-
 export default function HomeScreen() {
   const currentProfile = profile1[0];
-  const { colorScheme, toggleColorScheme } = useColorScheme();
+  // const { colorScheme, toggleColorScheme } = useColorScheme();
 
   return (
     <ScrollView className="bg-background" showsVerticalScrollIndicator={false}>
@@ -54,7 +59,9 @@ export default function HomeScreen() {
               backgroundColor="#f8f5f2"
               rotation={0}
               lineCap="round"
-              children={(fill) => <Text className="text-lg">{Math.round(fill)}%</Text>}
+              children={(fill) => (
+                <Text className="text-lg">{Math.round(fill)}%</Text>
+              )}
             />
             <Text className="mt-2 text-text text-base">Attendance</Text>
           </View>
@@ -65,34 +72,32 @@ export default function HomeScreen() {
                 <Text className=" text-lg text-text leading-[20px] mb-1">
                   Object Oriented Programming Lab
                 </Text>
-                <Text className="text-sm -mt-1 mb-3 text-text">
-                  BCSC 0801
-                </Text>
+                <Text className="text-sm -mt-1 mb-3 text-text">BCSC 0801</Text>
                 <View className="flex-row border rounded-lg justify-evenly divide-x">
                   {/* <View className="">
                     <Text className="text-text text-xs text-center px-2">
                       Thu
                     </Text>
                   </View> */}
-                  <View className="flex-1">
-                    <Text className="text-text text-xs text-center px-1">
+                  <View className="px-2">
+                    <Text className="text-text text-xs text-center">
                       AB-VIII 311
                     </Text>
                   </View>
-                  <View className="flex-1">
-                    <Text className="text-text text-xs text-center px-1">
-                      1:00PM-2:00PM
+                  <View className="flex-1 px-1">
+                    <Text className="text-text text-xs text-center">
+                      1:00 PM - 2:00 PM
                     </Text>
                   </View>
                 </View>
               </View>
             </View>
             <Link href="/Timetable" asChild>
-            <Pressable className="border-t pt-1 flex-row justify-between items-center">
-              <Text className="text-primary">View</Text>
-              {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
-              <ChevronRightIcon color="#078080" size={18} />
-            </Pressable>
+              <Pressable className="border-t pt-1 flex-row justify-between items-center">
+                <Text className="text-primary">View</Text>
+                {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
+                <ChevronRightIcon color="#078080" size={18} />
+              </Pressable>
             </Link>
           </View>
         </View>
@@ -161,14 +166,22 @@ export default function HomeScreen() {
             ) : (
               <Text className=" text-secondary">No Timetable Found</Text>
             )} */}
-            <FlatList scrollEnabled={false} data={timetableData} renderItem={({item}) => <TimetableCard subject={item["subject"]}
+            <FlatList
+              scrollEnabled={false}
+              data={timetableData["2023-09-02"]}
+              renderItem={({ item }) => (
+                <TimetableCard
+                  subject={item["subject"]}
                   teacher={item["teacher"]}
                   room={item["room"]}
                   block={item["block"]}
                   time={item["time"]}
                   subjectCode={item["subjectCode"]}
                   classType={item["classType"]}
-                  attendance={item["attendance"]}  />} />
+                  attendance={item["attendance"]}
+                />
+              )}
+            />
           </View>
         </View>
       </View>

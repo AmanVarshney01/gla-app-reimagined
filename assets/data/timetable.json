@@ -1,53 +1,132 @@
-[
-    {
-        "subject": "Discrete Mathematics",
-        "teacher": "Aryabhata",
-        "room": "323",
-        "block": "AB-VIII",
-        "time": "9:00 AM - 10:00 AM",
-        "subjectCode": "BCSC 1010",
-        "classType": "Lecture",
-        "attendance": "Present"
-
-    },
-    {
-        "subject": "English For Professional Porposes - I",
-        "teacher": "Shakespeare",
-        "room": "317",
-        "block": "AB-VIII",
-        "time": "10:00 AM - 11:00 AM",
-        "subjectCode": "BELH 1003",
-        "classType": "Lecture",
-        "attendance": "Absent"
-    },
-    {
-        "subject": "Computer Organization",
-        "teacher": "Steve Jobs",
-        "room": "323",
-        "block": "AB-VIII",
-        "time": "11:00 AM - 12:00 PM",
-        "subjectCode": "BCSC 1005",
-        "classType": "Lecture",
-        "attendance": "Present"
-    },
-    {
-        "subject": "Object Oriented Programming Lab",
-        "teacher": "Linus Torvalds",
-        "room": "405",
-        "block": "AB-I",
-        "time": "1:00 PM - 2:00 PM",
-        "subjectCode": "BCSC 0801", 
-        "classType": "Lab",
-        "attendance": "N/A"
-    },
-    {
-        "subject": "Object Oriented Programming Lab",
-        "teacher": "Linus Torvalds",
-        "room": "405",
-        "block": "AB-I",
-        "time": "2:00 PM - 3:00 PM",
-        "subjectCode": "BCSC 0801", 
-        "classType": "Lab",
-        "attendance": "N/A"
-    }
-]
+{
+    "2023-09-02": [
+        {
+            "subject": "Discrete Mathematics",
+            "teacher": "Aryabhata",
+            "room": "323",
+            "block": "AB-VIII",
+            "time": "9:00 AM - 10:00 AM",
+            "subjectCode": "BCSC 1010",
+            "classType": "Lecture",
+            "attendance": "Present"
+    
+        },
+        {
+            "subject": "English For Professional Porposes - I",
+            "teacher": "Shakespeare",
+            "room": "317",
+            "block": "AB-VIII",
+            "time": "10:00 AM - 11:00 AM",
+            "subjectCode": "BELH 1003",
+            "classType": "Lecture",
+            "attendance": "Absent"
+        },
+        {
+            "subject": "Computer Organization",
+            "teacher": "Steve Jobs",
+            "room": "323",
+            "block": "AB-VIII",
+            "time": "11:00 AM - 12:00 PM",
+            "subjectCode": "BCSC 1005",
+            "classType": "Lecture",
+            "attendance": "Present"
+        },
+        {
+            "subject": "Object Oriented Programming Lab",
+            "teacher": "Linus Torvalds",
+            "room": "405",
+            "block": "AB-I",
+            "time": "1:00 PM - 2:00 PM",
+            "subjectCode": "BCSC 0801", 
+            "classType": "Lab",
+            "attendance": "N/A"
+        },
+        {
+            "subject": "Object Oriented Programming Lab",
+            "teacher": "Linus Torvalds",
+            "room": "405",
+            "block": "AB-I",
+            "time": "2:00 PM - 3:00 PM",
+            "subjectCode": "BCSC 0801", 
+            "classType": "Lab",
+            "attendance": "N/A"
+        }
+    ],
+    "2023-09-03": [
+        {
+            "subject": "Computer Organization",
+            "teacher": "Steve Jobs",
+            "room": "323",
+            "block": "AB-VIII",
+            "time": "8:00 AM - 9:00 AM",
+            "subjectCode": "BCSC 1005",
+            "classType": "Lecture",
+            "attendance": "Present"
+        },
+        {
+            "subject": "Discrete Mathematics",
+            "teacher": "Aryabhata",
+            "room": "323",
+            "block": "AB-VIII",
+            "time": "9:00 AM - 10:00 AM",
+            "subjectCode": "BCSC 1010",
+            "classType": "Lecture",
+            "attendance": "Present"
+    
+        },
+        {
+            "subject": "English For Professional Porposes - I",
+            "teacher": "Shakespeare",
+            "room": "317",
+            "block": "AB-VIII",
+            "time": "10:00 AM - 11:00 AM",
+            "subjectCode": "BELH 1003",
+            "classType": "Lecture",
+            "attendance": "Present"
+        }
+    ],
+    "2023-09-04": [
+        {
+            "subject": "Object Oriented Programming",
+            "teacher": "Linus Torvalds",
+            "room": "323",
+            "block": "AB-VIII",
+            "time": "8:00 AM - 9:00 AM",
+            "subjectCode": "BCSC 1001",
+            "classType": "Lecture",
+            "attendance": "Present"
+        },
+        {
+            "subject": "Object Oriented Programming",
+            "teacher": "Linus Torvalds",
+            "room": "323",
+            "block": "AB-VIII",
+            "time": "9:00 AM - 10:00 AM",
+            "subjectCode": "BCSC 1001",
+            "classType": "Lecture",
+            "attendance": "Present"
+        },
+        {
+            "subject": "Discrete Mathematics",
+            "teacher": "Aryabhata",
+            "room": "323",
+            "block": "AB-VIII",
+            "time": "11:00 AM - 12:00 PM",
+            "subjectCode": "BCSC 1010",
+            "classType": "Lecture",
+            "attendance": "Present"
+    
+        },
+        {
+            "subject": "Computer Organization",
+            "teacher": "Steve Jobs",
+            "room": "323",
+            "block": "AB-VIII",
+            "time": "12:00 PM - 1:00 PM",
+            "subjectCode": "BCSC 1005",
+            "classType": "Lecture",
+            "attendance": "Present"
+        }
+    ]
+}
+  
