@@ -1,10 +1,14 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import DarkModeSwitch from '@/components/DarkModeSwitch'
+import { View, Text, ScrollView, Switch } from 'react-native'
 
-export default function Settings() {
-  return (
-    <View>
-      <Text>settings</Text>
-    </View>
+const settings = () => {
+  return (  
+    <ScrollView className=' bg-background'>
+      <View className=' p-2'>
+          <DarkModeSwitch />
+      </View>
+    </ScrollView>
   )
 }
+
+export default settings

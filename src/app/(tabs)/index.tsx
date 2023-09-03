@@ -5,25 +5,37 @@ import {
   ScrollView,
   FlatList,
   Pressable,
+  RefreshControl,
 } from "react-native";
-// import Animated from "react-native-reanimated";
+import { useState, useCallback } from "react";
 import profile1 from "../../../assets/data/profile1.json";
 import news from "../../../assets/data/news.json";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
 import TimetableCard from "@/components/TimetableCard";
 import timetableData from "../../../assets/data/timetable.json";
-// import { useColorScheme } from "nativewind";
 import { ChevronRightIcon } from "react-native-heroicons/solid";
 import { Link } from "expo-router";
 
 export default function HomeScreen() {
+  const [refreshing, setRefreshing] = useState(false);
   const currentProfile = profile1[0];
-  // const { colorScheme, toggleColorScheme } = useColorScheme();
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    setTimeout(() => {
+      setRefreshing(false);
+    }, 2000);
+  }, []);
 
   return (
-    <ScrollView className="bg-background" showsVerticalScrollIndicator={false}>
+    <ScrollView
+      className="bg-background"
+      showsVerticalScrollIndicator={false}
+      refreshControl={
+        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+      }
+    >
       <View className="p-2 justify-center items-center">
-        <View className="flex-row p-4 w-full items-center rounded-lg bg-white shadow shadow-stroke mb-3 boder dark:border border-stroke">
+        <View className="flex-row p-4 w-full items-center rounded-lg bg-white shadow shadow-stroke mb-3 boder border-stroke">
           <Image
             className=" rounded-full aspect-square w-16 mr-4"
             source={require("../../../assets/images/profilephoto.jpg")}
@@ -47,24 +59,27 @@ export default function HomeScreen() {
             </View>
           </View>
         </View>
-        <View className="flex-row w-full">
-          <View className="p-4 brder border-stroke bg-white rounded-lg shadow shadow-stroke items-center mr-2">
-            <AnimatedCircularProgress
-              size={95}
-              fill={currentProfile.attendance}
-              width={7}
-              tintColor={
-                currentProfile.attendance >= 75 ? "#078080" : "#f45d48"
-              }
-              backgroundColor="#f8f5f2"
-              rotation={0}
-              lineCap="round"
-              children={(fill) => (
-                <Text className="text-lg">{Math.round(fill)}%</Text>
-              )}
-            />
-            <Text className="mt-2 text-text text-base">Attendance</Text>
-          </View>
+        <View className="flex-row">
+          <Link href="/Attendance" asChild>
+            <Pressable className="p-4 brder border-stroke bg-white rounded-lg shadow shadow-stroke items-center mr-2 justify-between">
+              <AnimatedCircularProgress
+                size={95}
+                fill={currentProfile.attendance}
+                width={7}
+                duration={1000}
+                tintColor={
+                  currentProfile.attendance >= 75 ? "#078080" : "#f45d48"
+                }
+                backgroundColor="#f8f5f2"
+                rotation={0}
+                lineCap="round"
+                children={(fill) => (
+                  <Text className="text-lg">{Math.round(fill)}%</Text>
+                )}
+              />
+              <Text className="mt-2 text-text text-base">Attendance</Text>
+            </Pressable>
+          </Link>
           <View className="rounded-lg flex-1 p-2 bg-white boder border-stroke shadow shadow-stroke">
             <View className="flex-1">
               <Text className="text-text text-xs">Upcoming Class</Text>
@@ -93,7 +108,7 @@ export default function HomeScreen() {
               </View>
             </View>
             <Link href="/Timetable" asChild>
-              <Pressable className="border-t pt-1 flex-row justify-between items-center">
+              <Pressable className="border-t pt-1 mt-1 flex-row justify-between items-center active:bg-background">
                 <Text className="text-primary">View</Text>
                 {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
                 <ChevronRightIcon color="#078080" size={18} />
@@ -126,22 +141,26 @@ export default function HomeScreen() {
               <Text className="text-3xl text-heading">3</Text>
               <Text className="text-text text-base">Assignments due</Text>
             </View>
-            <View className="border-t pt-1 flex-row justify-between items-center">
-              <Text className="text-primary">View</Text>
-              {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
-              <ChevronRightIcon color="#078080" size={18} />
-            </View>
+            <Link href="/Assignments" asChild>
+              <Pressable className="border-t pt-1 flex-row justify-between items-center active:bg-background">
+                <Text className="text-primary">View</Text>
+                {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
+                <ChevronRightIcon color="#078080" size={18} />
+              </Pressable>
+            </Link>
           </View>
           <View className="flex-1 p-2 bg-white borer border-stroke shadow shadow-stroke rounded-lg ">
             <View className="mb-2">
               <Text className="text-3xl text-heading">93.50%</Text>
               <Text className="text-heading text-base">Percentage</Text>
             </View>
-            <View className="border-t pt-1 flex-row justify-between items-center">
-              <Text className="text-primary">View</Text>
-              {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
-              <ChevronRightIcon color="#078080" size={18} />
-            </View>
+            <Link href="/Result" asChild>
+              <Pressable className="border-t pt-1 flex-row justify-between items-center active:bg-background">
+                <Text className="text-primary">View</Text>
+                {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
+                <ChevronRightIcon color="#078080" size={18} />
+              </Pressable>
+            </Link>
           </View>
         </View>
         <View className="w-full mt-3 bg-white brder border-stroke shadow shadow-stroke rounded-lg p-2">

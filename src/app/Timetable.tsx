@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   View,
   Text,
-  StyleSheet,
   ScrollView,
   Pressable,
   FlatList,
@@ -11,6 +10,7 @@ import { Calendar } from "react-native-calendars";
 import { ChevronDownIcon, ChevronUpIcon } from "react-native-heroicons/solid";
 import timetableData from "../../assets/data/timetable.json";
 import TimetableCard from "@/components/TimetableCard";
+
 
 const daysOfWeek: string[] = [
   "Monday",
@@ -46,7 +46,7 @@ const classSchedule: Record<
 
 const TimetableScreen = () => {
   const [selectedDate, setSelectedDate] = useState<string>("2023-09-02");
-  const [isCalendarVisible, setCalendarVisibility] = useState<boolean>(true);
+  const [isCalendarVisible, setCalendarVisibility] = useState<boolean>(false);
 
   const onDateSelect = (date: { dateString: string }) => {
     setSelectedDate(date.dateString);
@@ -106,7 +106,7 @@ const TimetableScreen = () => {
       <View className="p-2">
         <Pressable
           onPress={toggleCalendarVisibility}
-          className="w-full bg-white flex-row justify-between px-4 items-center shadow shadow-stroke rounded-lg my- py-2"
+          className="w-full bg-white flex-row justify-between px-4 items-center shadow shadow-stroke rounded-lg my- py-2 active:bg-background"
         >
           {/* <View> */}
           {/* <Text>{isCalendarVisible ? "Hide Calendar" : "Show Calendar"}</Text> */}
@@ -119,6 +119,7 @@ const TimetableScreen = () => {
 
           {/* </View> */}
         </Pressable>
+        <View>
         {isCalendarVisible && (
           <Calendar
             onDayPress={onDateSelect}
@@ -131,6 +132,8 @@ const TimetableScreen = () => {
             }}
           />
         )}
+        </View>
+    
         {renderTimetableForDate()}
       </View>
     </ScrollView>

@@ -1,7 +1,7 @@
 // import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { Link, Tabs } from "expo-router";
-import { Pressable, useColorScheme } from "react-native";
-import { StyleSheet, View, Text } from "react-native";
+import { Tabs } from "expo-router";
+import { useColorScheme } from "react-native";
+import { View, Text } from "react-native";
 import { HomeIcon, BellIcon, PhoneIcon, Bars3Icon, UserIcon } from "react-native-heroicons/solid";
 
 /**
