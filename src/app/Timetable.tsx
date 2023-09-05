@@ -102,11 +102,11 @@ const TimetableScreen = () => {
   const [year, month, day] = selectedDate.split("-");
   const formattedDate = `${day} - ${month} - ${year}`;
   return (
-    <ScrollView className=" bg-background" showsVerticalScrollIndicator={false}>
-      <View className="p-2">
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View className="p-2 bg-gray-100">
         <Pressable
           onPress={toggleCalendarVisibility}
-          className="w-full bg-white flex-row justify-between px-4 items-center shadow shadow-stroke rounded-lg my- py-2 active:bg-background"
+          className="w-full bg-white flex-row justify-between px-4 items-center shadow shadow-stroke rounded-lg my- py-2 active:bg-gray-100"
         >
           {/* <View> */}
           {/* <Text>{isCalendarVisible ? "Hide Calendar" : "Show Calendar"}</Text> */}
@@ -126,7 +126,7 @@ const TimetableScreen = () => {
             markedDates={{ [selectedDate]: { selected: true } }}
             className="rounded-lg bg-white shadow shadow-stroke mt-3"
             theme={{
-              selectedDayBackgroundColor: "#078080",
+              selectedDayBackgroundColor: "#0F766E",
               todayTextColor: "#078080",
               arrowColor: "#078080",
             }}

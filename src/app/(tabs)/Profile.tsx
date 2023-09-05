@@ -21,9 +21,9 @@ function Card2({ title, value }: { title: string; value: string | number }) {
 export default function ProfileScreen() {
   const currentProfile = profile1[0];
   return (
-    <ScrollView className="bg-background" showsVerticalScrollIndicator={false}>
-      <View className="flex-1 p-2">
-        <View className="w-full justify-center items-center p-4 bg-white rounded-lg shadow shadow-stroke mb-2">
+    <ScrollView className="" showsVerticalScrollIndicator={false}>
+      <View className="flex-1 p-2 bg-gray-100">
+        <View className="w-full justify-center items-center p-4 bg-white rounded-lg shadow shadow-[#232323] mb-2">
           <Image
             className=" w-32 h-32 rounded-full"
             source={require("../../../assets/images/profilephoto.jpg")}
@@ -36,7 +36,7 @@ export default function ProfileScreen() {
             {currentProfile.semester} Sem ]
           </Text>
         </View>
-        <View className=" flex-row w-full rounded-lg shadow shadow-stroke bg-white mb-2">
+        <View className=" flex-row w-full rounded-lg shadow shadow-[#232323] bg-white mb-2">
           <View className="flex-1">
             <Card title={"Roll Number"} value={currentProfile.rollNumber} />
             <Card title={"Date Of Birth"} value={currentProfile.dateOfBirth} />
@@ -46,7 +46,7 @@ export default function ProfileScreen() {
             <Card title={"Phone Number"} value={currentProfile.phoneNumber} />
           </View>
         </View>
-        <View className="bg-white shadow shadow-stroke rounded-lg">
+        <View className="bg-white shadow shadow-[#232323] rounded-lg">
         <Card2 title={"Email"} value={currentProfile.email} />
         <Card2
           title={"Hostel"}
@@ -59,8 +59,9 @@ export default function ProfileScreen() {
           }
         />
         <Card2 title={"Address"} value={currentProfile.address} />
-        </View>
-        <View className=" bg-white shadow shadow-stroke rounded-lg mt-2">
+        <View className="border-b border-[#232323]/10 mx-2 my-2 "></View>
+        {/* </View>
+        <View className=" bg-white shadow shadow-[#232323] rounded-lg mt-2"> */}
         <View className=" flex-row justify-center">
           <View className=" px-4 py-2 items-center">
             <Text className=" text-text/80 text-sm mb-1">Father's Name</Text>

@@ -1,12 +1,9 @@
 import { Text, View } from 'react-native'
-import React, { Component } from 'react'
 
-export default class Hostel extends Component {
-  render() {
+export default function Hostel() {
     return (
-      <View>
+      <View className=' bg-gray-100'>
         <Text>Hostel</Text>
       </View>
     )
-  }
 }

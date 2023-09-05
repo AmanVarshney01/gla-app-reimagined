@@ -11,7 +11,7 @@ export default function DarkModeSwitch() {
   //   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   return (
-    <View className=" justify-between items-center flex-row px-4 py-2 rounded-lg bg-white shadow shadow-stroke">
+    <View className=" justify-between items-center flex-row px-4 py-2 rounded-lg bg-[#FFFFFE] shadow shadow-stroke">
       <Text className=" text-lg">Dark Mode</Text>
       <Switch
         // trackColor={{ false: "gray", true: "#f8f5f2" }}
@@ -25,11 +25,11 @@ export default function DarkModeSwitch() {
         // barHeight={26}
         renderInsideCircle={() =>
           colorScheme == "light" ? (
-            <View className="bg-yellow rounded-full">
+            <View className="bg-[#F59E0B] rounded-full">
               <SunIcon size={25} color="white" />
             </View>
           ) : (
-            <View className=" bg-stroke rounded-full">
+            <View className=" bg-[#232323] rounded-full">
               <MoonIcon size={25} color="white" />
             </View>
           )

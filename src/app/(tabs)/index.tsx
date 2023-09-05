@@ -23,26 +23,26 @@ export default function HomeScreen() {
     setRefreshing(true);
     setTimeout(() => {
       setRefreshing(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (
     <ScrollView
-      className="bg-background dark:bg-background-dark"
+      className=""
       showsVerticalScrollIndicator={false}
       refreshControl={
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
       }
     >
-      <View className="p-2 justify-center items-center">
-        <View className="flex-row p-4 w-full items-center rounded-lg bg-white dark:bg-white-dark shadow shadow-stroke mb-3">
+      <View className="p-2 justify-center items-center bg-gray-100">
+        <View className="flex-row p-4 w-full items-center rounded-lg bg-white shadow shadow-[#232323] mb-3">
           <Image
             className=" rounded-full aspect-square w-16 mr-4"
             source={require("../../../assets/images/profilephoto.jpg")}
           />
           <View>
-            <Text className="text-heading dark:text-heading-dark text-2xl">{currentProfile.name}</Text>
-            <Text className="text-text dark:text-text-dark">
+            <Text className="text-[#232323] dark:text-headingDark text-2xl">{currentProfile.name}</Text>
+            <Text className="text-text dark:text-textDark">
               {currentProfile.course} - {currentProfile.branch} [{" "}
               {currentProfile.semester} Sem ]
             </Text>
@@ -50,9 +50,9 @@ export default function HomeScreen() {
               <Text>
                 Sec - {currentProfile.section} ({currentProfile.classRollNo}) -{" "}
                 {currentProfile.isRegistered ? (
-                  <Text className=" text-primary">Registered</Text>
+                  <Text className=" text-teal-700">Registered</Text>
                 ) : (
-                  <Text className=" text-secondary">Not Registered</Text>
+                  <Text className=" text-red-600">Not Registered</Text>
                 )}
               </Text>
               {/* <Text>Roll No. - {currentProfile.classRollNo}</Text> */}
@@ -61,14 +61,14 @@ export default function HomeScreen() {
         </View>
         <View className="flex-row">
           <Link href="/Attendance" asChild>
-            <Pressable className="p-4 bg-white dark:bg-white-dark rounded-lg shadow shadow-stroke items-center mr-2 justify-between">
+            <Pressable className="p-4 bg-[#fffffe] dark:bg-whiteDark rounded-lg shadow shadow-[#232323] items-center mr-2 justify-between">
               <AnimatedCircularProgress
                 size={95}
                 fill={currentProfile.attendance}
                 width={7}
                 duration={1000}
                 tintColor={
-                  currentProfile.attendance >= 75 ? "#078080" : "#f45d48"
+                  currentProfile.attendance >= 75 ? "#0F766E" : "#DC2626"
                 }
                 backgroundColor="#f8f5f2"
                 rotation={0}
@@ -77,14 +77,14 @@ export default function HomeScreen() {
                   <Text className="text-lg">{Math.round(fill)}%</Text>
                 )}
               />
-              <Text className="mt-2 text-text dark:text-text-dark text-base">Attendance</Text>
+              <Text className="mt-2 text-text dark:text-textDark text-base">Attendance</Text>
             </Pressable>
           </Link>
-          <View className="rounded-lg flex-1 p-2 bg-white dark:bg-white-dark boder border-stroke shadow shadow-stroke">
+          <View className="rounded-lg flex-1 p-2 bg-[#fffffe] dark:bg-whiteDark boder border-[#232323] shadow shadow-[#232323]">
             <View className="flex-1">
               <Text className="text-text text-xs">Upcoming Class</Text>
               <View className=" my-2">
-                <Text className=" text-lg text-text dark:text-text-dark leading-[20px] mb-1">
+                <Text className=" text-lg text-text dark:text-textDark leading-[20px] mb-1">
                   Object Oriented Programming Lab
                 </Text>
                 <Text className="text-sm -mt-1 mb-3 text-text">BCSC 0801</Text>
@@ -95,12 +95,12 @@ export default function HomeScreen() {
                     </Text>
                   </View> */}
                   <View className="px-2">
-                    <Text className="text-text dark:text-text-dark text-xs text-center">
+                    <Text className="text-text dark:text-textDark text-xs text-center">
                       AB-VIII 311
                     </Text>
                   </View>
                   <View className="flex-1 px-1">
-                    <Text className="text-text dark:text-text-dark text-xs text-center">
+                    <Text className="text-text dark:text-textDark text-xs text-center">
                       1:00 PM - 2:00 PM
                     </Text>
                   </View>
@@ -108,15 +108,15 @@ export default function HomeScreen() {
               </View>
             </View>
             <Link href="/Timetable" asChild>
-              <Pressable className="border-t pt-1 mt-1 flex-row justify-between items-center active:bg-background">
-                <Text className="text-primary">View</Text>
+              <Pressable className="border-t pt-1 mt-1 flex-row justify-between items-center active:bg-gray-100">
+                <Text className=" text-teal-700">View</Text>
                 {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
                 <ChevronRightIcon color="#078080" size={18} />
               </Pressable>
             </Link>
           </View>
         </View>
-        <View className="w-full bg-white dark:bg-white-dark shadow shadow-stroke rounded-lg mt-3 p-1">
+        <View className="w-full bg-[#fffffe] dark:bg-whiteDark shadow shadow-[#232323] rounded-lg mt-3 p-1">
           <FlatList
             data={news}
             horizontal
@@ -129,42 +129,42 @@ export default function HomeScreen() {
                   size={10}
                   color="#FF934F"
                 ></FontAwesome> */}
-                <View className="w-2 h-2 rounded-full bg-yellow"></View>
+                <View className="w-2 h-2 rounded-full bg-yellow-500"></View>
                 <Text className="mx-2">{item.title}</Text>
               </View>
             )}
           />
         </View>
         <View className="w-full flex-row mt-3">
-          <View className="mr-2 p-2 bg-white dark:bg-white-dark shadow shadow-stroke rounded-lg ">
+          <View className="mr-2 p-2 bg-[#fffffe] dark:bg-whiteDark shadow shadow-[#232323] rounded-lg ">
             <View className="mb-2">
-              <Text className="text-3xl text-heading dark:text-heading-dark">3</Text>
-              <Text className="text-text dark:text-text-dark text-base">Assignments due</Text>
+              <Text className="text-3xl text-[#232323] dark:text-headingDark">3</Text>
+              <Text className="text-text dark:text-textDark text-base">Assignments due</Text>
             </View>
             <Link href="/Assignments" asChild>
-              <Pressable className="border-t pt-1 flex-row justify-between items-center active:bg-background">
-                <Text className="text-primary">View</Text>
+              <Pressable className="border-t pt-1 flex-row justify-between items-center active:bg-gray-100">
+                <Text className="text-[#078080]">View</Text>
                 {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
                 <ChevronRightIcon color="#078080" size={18} />
               </Pressable>
             </Link>
           </View>
-          <View className="flex-1 p-2 bg-white borer border-stroke shadow shadow-stroke rounded-lg ">
+          <View className="flex-1 p-2 bg-[#fffffe] shadow shadow-[#232323] rounded-lg ">
             <View className="mb-2">
-              <Text className="text-3xl text-heading">93.50%</Text>
-              <Text className="text-heading text-base">Percentage</Text>
+              <Text className="text-3xl text-[#232323]">93.50%</Text>
+              <Text className="text-[#232323] text-base">Percentage</Text>
             </View>
             <Link href="/Result" asChild>
-              <Pressable className="border-t pt-1 flex-row justify-between items-center active:bg-background">
-                <Text className="text-primary">View</Text>
+              <Pressable className="border-t pt-1 flex-row justify-between items-center active:bg-gray-100">
+                <Text className="text-[#078080]">View</Text>
                 {/* <FontAwesome name="arrow-right" size={18} color="#078080" /> */}
                 <ChevronRightIcon color="#078080" size={18} />
               </Pressable>
             </Link>
           </View>
         </View>
-        <View className="w-full mt-3 bg-white brder border-stroke shadow shadow-stroke rounded-lg p-2">
-          <View className="border-b border-stroke pb-2">
+        <View className="w-full mt-3 bg-white shadow shadow-[#232323] rounded-lg p-2">
+          <View className="border-b border-[#232323] pb-2">
             <Text className="text-lg font-base">Today's Timetable</Text>
           </View>
           <View className="pt-2 w-full ">
@@ -183,7 +183,7 @@ export default function HomeScreen() {
                 />
               ))
             ) : (
-              <Text className=" text-secondary">No Timetable Found</Text>
+              <Text className=" text-[#f45d48]">No Timetable Found</Text>
             )} */}
             <FlatList
               scrollEnabled={false}
