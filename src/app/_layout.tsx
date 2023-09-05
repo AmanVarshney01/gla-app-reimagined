@@ -52,6 +52,7 @@ function RootLayoutNav() {
           backgroundColor: "#026c45",
         },
         headerTintColor: "#fffffe",
+        // navigationBarColor: "#026c45",
       }}
     >
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />

@@ -6,35 +6,27 @@ import { SunIcon, MoonIcon } from "react-native-heroicons/solid";
 
 export default function DarkModeSwitch() {
   const { colorScheme, toggleColorScheme } = useColorScheme();
-  //   console.log(colorScheme);
-  //   const [isEnabled, setIsEnabled] = useState(false);
-  //   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   return (
-    <View className=" justify-between items-center flex-row px-4 py-2 rounded-lg bg-[#FFFFFE] shadow shadow-stroke">
-      <Text className=" text-lg">Dark Mode</Text>
+    <View className="flex-row justify-between items-center px-4 py-2 rounded-lg bg-white shadow-md">
+      <Text className="text-lg font-semibold text-gray-800">Dark Mode</Text>
       <Switch
-        // trackColor={{ false: "gray", true: "#f8f5f2" }}
-        // thumbColor={colorScheme == "light" ? "#F59E0B" : "#232323"}
-        circleSize={25}
+        circleSize={30}
         activeText={"ON"}
         inActiveText={"OFF"}
-        backgroundActive={"#232323"}
-        backgroundInactive={"#F59E0B"}
-        // circleBorderWidth={3}
-        // barHeight={26}
+        backgroundActive={"#1F2937"}
+        backgroundInactive={"#FBBF24"}
         renderInsideCircle={() =>
           colorScheme == "light" ? (
-            <View className="bg-[#F59E0B] rounded-full">
-              <SunIcon size={25} color="white" />
+            <View className="bg-yellow-500 rounded-full">
+              <SunIcon size={30} color="white" />
             </View>
           ) : (
-            <View className=" bg-[#232323] rounded-full">
-              <MoonIcon size={25} color="white" />
+            <View className="bg-gray-800 rounded-full">
+              <MoonIcon size={30} color="white" />
             </View>
           )
         }
-        // innerCircleStyle={{ borderColor: "#232323" }}
         switchWidthMultiplier={2.5}
         switchLeftPx={5}
         switchRightPx={5}

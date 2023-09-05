@@ -3,8 +3,8 @@ import { View, Text, ScrollView, Switch } from 'react-native'
 
 const settings = () => {
   return (  
-    <ScrollView className=' bg-background'>
-      <View className=' p-2'>
+    <ScrollView className='flex-grow bg-gray-100'>
+      <View className='flex justify-center p-4'>
           <DarkModeSwitch />
       </View>
     </ScrollView>

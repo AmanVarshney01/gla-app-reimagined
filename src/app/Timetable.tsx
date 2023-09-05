@@ -1,36 +1,16 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  Pressable,
-  FlatList,
-} from "react-native";
+import { View, Text, ScrollView, Pressable, FlatList } from "react-native";
 import { Calendar } from "react-native-calendars";
 import { ChevronDownIcon, ChevronUpIcon } from "react-native-heroicons/solid";
 import timetableData from "../../assets/data/timetable.json";
 import TimetableCard from "@/components/TimetableCard";
 
+// Removed unused daysOfWeek array
 
-const daysOfWeek: string[] = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-];
-// const classSchedule: Record<string, { time: string; course: string }[]> = {
-//   "2023-09-02": [
-//     { time: "09:00 AM - 10:30 AM", course: "Mathematics" },
-//     { time: "11:00 AM - 12:30 PM", course: "Physics" },
-//   ],
-//   "2023-09-03": [
-//     { time: "09:00 AM - 10:30 AM", course: "Chemistry" },
-//     { time: "11:00 AM - 12:30 PM", course: "Computer Science" },
-//   ],
-//   // Add more dates and class schedules as needed
-// };
-const classSchedule: Record<
+// Removed commented out classSchedule
+
+// Renamed classSchedule to timetable
+const timetable: Record<
   string,
   {
     subject: string;
@@ -60,19 +40,19 @@ const TimetableScreen = () => {
     if (!selectedDate) {
       return (
         <View className="items-center m-3">
-          <Text className=" text-secondary text-lg">
+          <Text className="text-secondary text-lg">
             Please select a date to view the timetable.
           </Text>
         </View>
       );
     }
 
-    const timetableForSelectedDate = classSchedule[selectedDate];
+    const timetableForSelectedDate = timetable[selectedDate];
 
     if (!timetableForSelectedDate) {
       return (
         <View className="items-center m-3">
-          <Text className=" text-secondary text-lg">No Timetable Found.</Text>
+          <Text className="text-secondary text-lg">No Timetable Found.</Text>
         </View>
       );
     }
@@ -110,7 +90,7 @@ const TimetableScreen = () => {
         >
           {/* <View> */}
           {/* <Text>{isCalendarVisible ? "Hide Calendar" : "Show Calendar"}</Text> */}
-          <Text className=" text-2xl">{formattedDate}</Text>
+          <Text className="text-2xl">{formattedDate}</Text>
           {isCalendarVisible ? (
             <ChevronUpIcon color="#078080" size={18} />
           ) : (
@@ -141,3 +121,4 @@ const TimetableScreen = () => {
 };
 
 export default TimetableScreen;
+

@@ -20,35 +20,35 @@ export default function TimetableCard({
   attendance: string;
 }) {
   return (
-    <View className="w-full border-b border-b-[#232323]/20 pt-1 pb-2 px-2">
+    <View className="w-full border-b border-gray-200 dark:border-gray-700 pt-1 pb-2 px-2">
       <View className="flex-1">
-        <Text className=" text-sm mb-1">{classType}</Text>
-        <Text className=" text-base font-medium leading-[20px]">{subject}</Text>
-        <Text className="  mb-1">{subjectCode}</Text>
-        <View className="flex-row border rounded-lg justify-around divide-x my-2">
-          <View className=" flex-1 justify-center items-center">
-            <Text className="text-[#222525] font-medium text-xs px-2">{block}</Text>
+        <Text className="text-sm dark:text-gray-200 mb-1">{classType}</Text>
+        <Text className="text-base font-medium leading-5 dark:text-gray-200">{subject}</Text>
+        <Text className="mb-1 dark:text-gray-200">{subjectCode}</Text>
+        <View className="flex-row border dark:border-gray-300 rounded-lg justify-around divide-x dark:divide-gray-300 my-2">
+          <View className="flex-1 justify-center items-center">
+            <Text className="text-gray-700 dark:text-gray-200 font-medium text-xs px-2">{block}</Text>
           </View>
-          <View className=" flex-1 justify-center items-center">
-            <Text className="text-[#222525] font-medium text-xs px-1">{room}</Text>
+          <View className="flex-1 justify-center items-center">
+            <Text className="text-gray-700 dark:text-gray-200 font-medium text-xs px-1">{room}</Text>
           </View>
           <View className="px-2">
-            <Text className="text-[#222525] font-medium text-xs px-1">{time}</Text>
+            <Text className="text-gray-700 dark:text-gray-200 font-medium text-xs px-1">{time}</Text>
           </View>
         </View>
-        <Text className=" text-sm mb-2">Faculty: {teacher}</Text>
+        <Text className="text-sm dark:text-gray-200 mb-2">Faculty: {teacher}</Text>
       </View>
-      <View className="flex-row ">
+      <View className="flex-row">
         {attendance === "Present" ? (
-          <Text className=" text-xs font-medium text-[#FFFFFE] bg-teal-700 rounded-lg px-2 py-1">
+          <Text className="text-xs font-medium text-white bg-teal-700 rounded-lg px-2 py-1">
             {attendance}
           </Text>
         ) : attendance === "Absent" ? (
-          <Text className=" text-xs font-medium text-[#FFFFFE] bg-red-600 rounded-lg px-2 py-1">
+          <Text className="text-xs font-medium text-white bg-red-600 rounded-lg px-2 py-1">
             {attendance}
           </Text>
         ) : (
-          <Text className=" text-xs font-medium text-[#FFFFFE] bg-yellow-500 rounded-lg px-2 py-1">
+          <Text className="text-xs font-medium text-white bg-yellow-500 rounded-lg px-2 py-1">
             {attendance}
           </Text>
         )}
@@ -56,3 +56,4 @@ export default function TimetableCard({
     </View>
   );
 }
+

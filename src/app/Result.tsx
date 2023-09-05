@@ -1,12 +1,9 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import { View, Text } from 'react-native'
 
-export default class Result extends Component {
-  render() {
-    return (
-      <View>
-        <Text>Result</Text>
-      </View>
-    )
-  }
+export default function Result() {
+  return (
+    <View className=' flex-1 bg-gray-100'>
+      <Text className=''>Result</Text>
+    </View>
+  )
 }
