@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "University Notification",
+    "time": "12:00 PM, 1st Jan 2022",
+    "message": "This is a sample university notification. Please check the details.",
+    "tags": ["#regular"]
+  },
+  {
+    "id": 2,
+    "title": "Results Out",
+    "time": "10:00 AM, 2nd Feb 2022",
+    "message": "The results for the semester exams have been published. Please check your grades.",
+    "tags": ["#urgent", "#important"]
+  },
+  {
+    "id": 3,
+    "title": "New Assignment",
+    "time": "11:00 AM, 3rd Mar 2022",
+    "message": "A new assignment has been posted for the Data Structures course. Please submit by the end of this week.",
+    "tags": ["#urgent", "#compulsory"]
+  },
+  {
+    "id": 4,
+    "title": "New Event",
+    "time": "1:00 PM, 4th Apr 2022",
+    "message": "A new event is being organized by the Computer Science department. Please register if interested.",
+    "tags": ["#regular"]
+  }
+]
+
+

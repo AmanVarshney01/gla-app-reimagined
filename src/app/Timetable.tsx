@@ -5,11 +5,6 @@ import { ChevronDownIcon, ChevronUpIcon } from "react-native-heroicons/solid";
 import timetableData from "../../assets/data/timetable.json";
 import TimetableCard from "@/components/TimetableCard";
 
-// Removed unused daysOfWeek array
-
-// Removed commented out classSchedule
-
-// Renamed classSchedule to timetable
 const timetable: Record<
   string,
   {
@@ -39,8 +34,8 @@ const TimetableScreen = () => {
   const renderTimetableForDate = () => {
     if (!selectedDate) {
       return (
-        <View className="items-center m-3">
-          <Text className="text-secondary text-lg">
+        <View className="items-center m-3 dark:bg-gray-800">
+          <Text className="text-secondary text-lg dark:text-gray-100">
             Please select a date to view the timetable.
           </Text>
         </View>
@@ -51,14 +46,14 @@ const TimetableScreen = () => {
 
     if (!timetableForSelectedDate) {
       return (
-        <View className="items-center m-3">
-          <Text className="text-secondary text-lg">No Timetable Found.</Text>
+        <View className="items-center m-3 dark:bg-gray-800">
+          <Text className="text-secondary text-lg dark:text-gray-100">No Timetable Found.</Text>
         </View>
       );
     }
 
     return (
-      <View className="bg-white my-3 shadow shadow-stroke rounded-lg w-full p-2">
+      <View className="bg-white my-3 shadow shadow-stroke rounded-lg w-full p-2 dark:bg-gray-800">
         <FlatList
           scrollEnabled={false}
           data={timetableForSelectedDate}
@@ -82,15 +77,15 @@ const TimetableScreen = () => {
   const [year, month, day] = selectedDate.split("-");
   const formattedDate = `${day} - ${month} - ${year}`;
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <View className="p-2 bg-gray-100">
+    <ScrollView showsVerticalScrollIndicator={false} className="bg-gray-100 dark:bg-gray-900">
+      <View className="p-2 bg-gray-100 dark:bg-gray-900 flex-1">
         <Pressable
           onPress={toggleCalendarVisibility}
-          className="w-full bg-white flex-row justify-between px-4 items-center shadow shadow-stroke rounded-lg my- py-2 active:bg-gray-100"
+          className="w-full bg-white flex-row justify-between px-4 items-center shadow shadow-stroke rounded-lg my- py-2 active:bg-gray-100 dark:bg-gray-800 dark:active:bg-gray-900"
         >
           {/* <View> */}
           {/* <Text>{isCalendarVisible ? "Hide Calendar" : "Show Calendar"}</Text> */}
-          <Text className="text-2xl">{formattedDate}</Text>
+          <Text className="text-2xl dark:text-gray-100">{formattedDate}</Text>
           {isCalendarVisible ? (
             <ChevronUpIcon color="#078080" size={18} />
           ) : (
@@ -104,7 +99,7 @@ const TimetableScreen = () => {
           <Calendar
             onDayPress={onDateSelect}
             markedDates={{ [selectedDate]: { selected: true } }}
-            className="rounded-lg bg-white shadow shadow-stroke mt-3"
+            className="rounded-lg bg-white shadow shadow-stroke mt-3 dark:bg-gray-800"
             theme={{
               selectedDayBackgroundColor: "#0F766E",
               todayTextColor: "#078080",

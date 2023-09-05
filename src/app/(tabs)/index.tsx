@@ -15,8 +15,10 @@ import TimetableCard from "@/components/TimetableCard";
 import timetableData from "../../../assets/data/timetable.json";
 import { ChevronRightIcon } from "react-native-heroicons/solid";
 import { Link } from "expo-router";
+import { useColorScheme } from "nativewind";
 
 export default function HomeScreen() {
+  const {colorScheme} = useColorScheme();
   const [refreshing, setRefreshing] = useState(false);
   const currentProfile = profile1[0];
   const onRefresh = useCallback(() => {
@@ -47,7 +49,7 @@ export default function HomeScreen() {
               {currentProfile.semester} Sem ]
             </Text>
             <View className="w-full">
-              <Text>
+              <Text className="text-gray-700 dark:text-gray-200">
                 Sec - {currentProfile.section} ({currentProfile.classRollNo}) -{" "}
                 {currentProfile.isRegistered ? (
                   <Text className="text-green-600">Registered</Text>
@@ -69,7 +71,7 @@ export default function HomeScreen() {
                 tintColor={
                   currentProfile.attendance >= 75 ? "#10B981" : "#EF4444"
                 }
-                backgroundColor="#F3F4F6"
+                backgroundColor = {colorScheme == "light" ? "#F3F4F6" : "#374151"}
                 rotation={0}
                 lineCap="round"
                 children={(fill) => (

@@ -17,7 +17,7 @@ const header = (title: string) => (
 )
 
 export default function TabLayout() {
-  const {colorScheme, setColorScheme} = useColorScheme();
+  const {colorScheme} = useColorScheme();
 
   return (
     <Tabs

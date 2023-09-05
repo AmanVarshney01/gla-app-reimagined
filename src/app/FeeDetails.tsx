@@ -1,12 +1,9 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import { View, Text } from 'react-native'
 
-export default class FeeDetails extends Component {
-  render() {
-    return (
-      <View>
-        <Text>FeeDetails</Text>
-      </View>
-    )
-  }
+export default function FeeDetails() {
+  return (
+    <View>
+      <Text>FeeDetails</Text>
+    </View>
+  )
 }
