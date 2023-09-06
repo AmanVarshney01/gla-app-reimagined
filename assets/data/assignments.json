@@ -1,0 +1,38 @@
+[
+  {
+    "subject": "Discrete Mathematics",
+    "title": "Assignment 2",
+    "lastDate": "2022-10-10",
+    "maxMarks": 10,
+    "status": "Not Submitted"
+  },
+  {
+    "subject": "Database Management Systems",
+    "title": "Assignment 1",
+    "lastDate": "2022-10-15",
+    "maxMarks": 5,
+    "status": "Not Submitted"
+  },
+  {
+    "subject": "Object Oriented Programming",
+    "title": "Assignment 1",
+    "lastDate": "2022-10-20",
+    "maxMarks": 10,
+    "status": "Not Submitted"
+  },
+  {
+    "subject": "English For Professional Porposes - I",
+    "title": "Assignment 1",
+    "lastDate": "2022-8-25",
+    "maxMarks": 10,
+    "status": "Expired"
+  },
+  {
+    "subject": "Discrete Mathematics",
+    "title": "Assignment 1",
+    "lastDate": "2022-8-10",
+    "maxMarks": 10,
+    "status": "Submitted"
+  }
+]
+

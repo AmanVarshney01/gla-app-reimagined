@@ -14,6 +14,7 @@ import {
   BookOpenIcon,
   CakeIcon,
   ArrowRightOnRectangleIcon,
+  DocumentTextIcon
 } from "react-native-heroicons/solid";
 
 export default function MoreScreen() {
@@ -55,6 +56,15 @@ export default function MoreScreen() {
               <CalendarDaysIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
             <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">TimeTable</Text>
+          </Pressable>
+        </Link>
+
+        <Link href="/Assignments" asChild>
+          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-100 dark:active:bg-gray-900 rounded-lg mt-2">
+            <View className="w-14 items-center justify-center">
+              <DocumentTextIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
+            </View>
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Assignments</Text>
           </Pressable>
         </Link>
 
