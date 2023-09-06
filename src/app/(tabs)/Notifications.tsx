@@ -5,12 +5,12 @@ import { ScrollView } from 'react-native-gesture-handler';
 export default function NotificationsScreen() {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      <View className='flex-1 bg-gray-100 dark:bg-gray-900'>
+      <View className='flex-1 bg-gray-100 dark:bg-gray-900 p-4'>
         <FlatList
         scrollEnabled={false}
         data={Notifications}
         renderItem={({item}) => (
-          <View className='m-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg'>
+          <View className='p-4 mb-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg'>
             <View className='flex justify-between items-center'>
               <Text className='text-lg font-bold dark:text-gray-200'>{item.title}</Text>
               <Text className='text-sm text-gray-500 dark:text-gray-400'>{item.time}</Text>
