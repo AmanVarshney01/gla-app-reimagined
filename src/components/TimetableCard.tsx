@@ -40,7 +40,7 @@ export default function TimetableCard({
       </View>
       <View className="flex-row">
         {attendance === "Present" ? (
-          <Text className="text-xs font-medium text-white bg-teal-700 rounded-lg px-2 py-1">
+          <Text className="text-xs font-medium text-white bg-green-600 rounded-lg px-2 py-1">
             {attendance}
           </Text>
         ) : attendance === "Absent" ? (

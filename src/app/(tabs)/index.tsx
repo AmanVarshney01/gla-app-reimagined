@@ -172,6 +172,7 @@ export default function HomeScreen() {
               )}
             />
           </View>
+          
         </View>
       </View>
     </ScrollView>

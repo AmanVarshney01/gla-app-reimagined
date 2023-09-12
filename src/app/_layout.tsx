@@ -18,7 +18,7 @@ export const unstable_settings = {
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  StatusBar.setBackgroundColor("#037f51");
+  StatusBar.setBackgroundColor("#16A34A");
   StatusBar.setBarStyle("light-content");
   const [loaded, error] = useFonts({
     SpaceMono: require("../../assets/fonts/SpaceMono-Regular.ttf"),
@@ -50,12 +50,28 @@ function RootLayoutNav() {
           backgroundColor: "#026c45",
         },
         headerTintColor: "#fffffe",
-        // navigationBarColor: "#026c45",
       }}
     >
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      {/* <Stack.Screen name="modal" options={{ presentation: "modal" }} /> */}
       <Stack.Screen name="Settings" />
+      <Stack.Screen name="Attendance" />
+      <Stack.Screen name="Hostel" />
+      <Stack.Screen name="Result/index" options={{
+        title: 'Result',
+      }} />
+      <Stack.Screen name="Timetable" options={{
+        title: 'Timetable',
+        // presentation: 'modal'
+      }} />
+      <Stack.Screen name="JoinClub" options={{
+        title: 'Join Club'
+      }} />
+      <Stack.Screen name="FeeDetails" options={{
+        title: "Fee Details"
+      }} />
+      <Stack.Screen name="Assignments" />
+      <Stack.Screen name="Library" />
     </Stack>
   );
 }
+

@@ -23,7 +23,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: "#fffffe",
-        tabBarActiveBackgroundColor: "#0F766E",
+        tabBarActiveBackgroundColor: "#16A34A",
         tabBarShowLabel: false,
         tabBarStyle: {
           backgroundColor: colorScheme == "light" ? "#fffffe" : "#1F2937",
@@ -40,7 +40,7 @@ export default function TabLayout() {
         },
         headerTitle: HomeHeader,
         headerStyle: {
-          backgroundColor: "#026c45",
+          backgroundColor: "#15803D",
         },
       }}
     >

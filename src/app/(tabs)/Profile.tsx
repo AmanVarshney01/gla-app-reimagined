@@ -3,7 +3,7 @@ import profile1 from "../../../assets/data/profile1.json";
 
 function Card({ title, value }: { title: string; value: string | number }) {
   return (
-    <View className="flex items-center px-4 py-2 dark:bg-gray-900">
+    <View className="flex items-center px-4 py-2">
       <Text className="text-gray-700 dark:text-gray-300 text-sm mb-1">{title}</Text>
       <Text className="text-gray-900 dark:text-gray-100 text-lg">{value}</Text>
     </View>
@@ -11,7 +11,7 @@ function Card({ title, value }: { title: string; value: string | number }) {
 }
 function Card2({ title, value }: { title: string; value: string | number }) {
   return (
-    <View className="flex-1 px-4 py-2 dark:bg-gray-900">
+    <View className="flex-1 px-4 py-2">
       <Text className="text-gray-700 dark:text-gray-300 text-sm mb-1">{title}</Text>
       <Text className="text-gray-900 dark:text-gray-100 text-base">{value}</Text>
     </View>
@@ -47,41 +47,41 @@ export default function ProfileScreen() {
           </View>
         </View>
         <View className="bg-white dark:bg-gray-800 shadow-lg rounded-lg">
-        <Card2 title={"Email"} value={currentProfile.email} />
-        <Card2
-          title={"Hostel"}
-          value={
-            currentProfile.hostelName +
-            " " +
-            "(" +
-            currentProfile.hostelRoomNo +
-            ")"
-          }
-        />
-        <Card2 title={"Address"} value={currentProfile.address} />
-        <View className="border-b border-gray-200 dark:border-gray-800 mx-2 my-2 "></View>
-        {/* </View>
+          <Card2 title={"Email"} value={currentProfile.email} />
+          <Card2
+            title={"Hostel"}
+            value={
+              currentProfile.hostelName +
+              " " +
+              "(" +
+              currentProfile.hostelRoomNo +
+              ")"
+            }
+          />
+          <Card2 title={"Address"} value={currentProfile.address} />
+          <View className="border-b border-gray-200 dark:border-gray-700 mx-2 my-2 "></View>
+          {/* </View>
         <View className=" bg-white shadow shadow-[#232323] rounded-lg mt-2"> */}
-        <View className=" flex-row justify-center">
-          <View className="flex items-center px-4 py-2 dark:bg-gray-900">
-            <Text className="text-gray-700 dark:text-gray-300 text-sm mb-1">Father's Name</Text>
-            <Text className="text-gray-900 dark:text-gray-100 text-base">{currentProfile.fatherName}</Text>
+          <View className=" flex-row justify-center">
+            <View className="flex items-center px-4 py-2 dark:bg-gray-800">
+              <Text className="text-gray-700 dark:text-gray-300 text-sm mb-1">Father's Name</Text>
+              <Text className="text-gray-900 dark:text-gray-100 text-base">{currentProfile.fatherName}</Text>
+            </View>
+            <View className="flex items-center px-4 py-2 dark:bg-gray-800">
+              <Text className="text-gray-700 dark:text-gray-300 text-sm mb-1">Father's Phone Number</Text>
+              <Text className="text-gray-900 dark:text-gray-100 text-base">{currentProfile.fatherContactNumber}</Text>
+            </View>
           </View>
-          <View className="flex items-center px-4 py-2 dark:bg-gray-900">
-            <Text className="text-gray-700 dark:text-gray-300 text-sm mb-1">Father's Phone Number</Text>
-            <Text className="text-gray-900 dark:text-gray-100 text-base">{currentProfile.fatherContactNumber}</Text>
+          <View className=" flex-row justify-center">
+            <View className="flex items-center px-4 py-2 dark:bg-gray-800">
+              <Text className="text-gray-700 dark:text-gray-300 text-sm mb-1">Mother's Name</Text>
+              <Text className="text-gray-900 dark:text-gray-100 text-base">{currentProfile.motherName}</Text>
+            </View>
+            <View className="flex items-center px-4 py-2 dark:bg-gray-800">
+              <Text className="text-gray-700 dark:text-gray-300 text-sm mb-1">Mother's Phone Number</Text>
+              <Text className="text-gray-900 dark:text-gray-100 text-base">{currentProfile.motherContactNumber}</Text>
+            </View>
           </View>
-        </View>
-        <View className=" flex-row justify-center">
-          <View className="flex items-center px-4 py-2 dark:bg-gray-900">
-            <Text className="text-gray-700 dark:text-gray-300 text-sm mb-1">Mother's Name</Text>
-            <Text className="text-gray-900 dark:text-gray-100 text-base">{currentProfile.motherName}</Text>
-          </View>
-          <View className="flex items-center px-4 py-2 dark:bg-gray-900">
-            <Text className="text-gray-700 dark:text-gray-300 text-sm mb-1">Mother's Phone Number</Text>
-            <Text className="text-gray-900 dark:text-gray-100 text-base">{currentProfile.motherContactNumber}</Text>
-          </View>
-        </View>
         </View>
       </View>
     </ScrollView>
