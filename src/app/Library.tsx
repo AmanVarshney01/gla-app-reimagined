@@ -7,7 +7,6 @@ export default class Library extends Component {
     return (
       <View>
         <Text>Library</Text>
-        <Link href={"/modal"}> mmodal</Link>
       </View>
     )
   }

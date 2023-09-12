@@ -8,21 +8,21 @@ export default function DarkModeSwitch() {
   const { colorScheme, toggleColorScheme } = useColorScheme();
 
   return (
-    <View className="flex-row justify-between items-center px-4 py-2 rounded-lg bg-white shadow-md">
-      <Text className="text-lg font-semibold text-gray-800">Dark Mode</Text>
+    <View className="flex-row justify-between items-center px-4 py-2 rounded-lg bg-white dark:bg-gray-800 shadow-md">
+      <Text className="text-lg font-semibold text-gray-800 dark:text-gray-100">Dark Mode</Text>
       <Switch
         circleSize={30}
         activeText={"ON"}
         inActiveText={"OFF"}
-        backgroundActive={"#1F2937"}
-        backgroundInactive={"#FBBF24"}
+        backgroundActive={"#3F3F46"}
+        backgroundInactive={"#EAB308"}
         renderInsideCircle={() =>
           colorScheme == "light" ? (
             <View className="bg-yellow-500 rounded-full">
               <SunIcon size={30} color="white" />
             </View>
           ) : (
-            <View className="bg-gray-800 rounded-full">
+            <View className="bg-gray-700 rounded-full">
               <MoonIcon size={30} color="white" />
             </View>
           )

@@ -2,7 +2,10 @@ import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 import { StatusBar } from "react-native";
+// import StatusBar from "expo-status-bar";
 import "../../global.css";
+import * as NavigationBar from "expo-navigation-bar";
+import { useColorScheme } from "nativewind";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -18,6 +21,9 @@ export const unstable_settings = {
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  const { colorScheme } = useColorScheme();
+  NavigationBar.setBackgroundColorAsync(colorScheme == 'light' ? 'white' : '#1F2937')
+  // StatusBar.setStatusBarBackgroundColor('light-content', true)
   StatusBar.setBackgroundColor("#16A34A");
   StatusBar.setBarStyle("light-content");
   const [loaded, error] = useFonts({
@@ -47,7 +53,7 @@ function RootLayoutNav() {
     <Stack
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#026c45",
+          backgroundColor: "#15803D",
         },
         headerTintColor: "#fffffe",
       }}

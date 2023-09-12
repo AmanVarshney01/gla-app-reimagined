@@ -28,7 +28,7 @@ export default function MoreScreen() {
             <View className="w-14 items-center justify-center">
               <IdentificationIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
-            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Attendance</Text>
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Attendance</Text>
           </Pressable>
         </Link>
 
@@ -37,7 +37,7 @@ export default function MoreScreen() {
             <View className="w-14 items-center justify-center">
               <KeyIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
-            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Hostel</Text>
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Hostel</Text>
           </Pressable>
         </Link>
 
@@ -46,7 +46,7 @@ export default function MoreScreen() {
             <View className="w-14 items-center justify-center">
               <AcademicCapIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
-            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Result</Text>
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Result</Text>
           </Pressable>
         </Link>
 
@@ -55,7 +55,7 @@ export default function MoreScreen() {
             <View className="w-14 items-center justify-center">
               <CalendarDaysIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
-            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">TimeTable</Text>
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">TimeTable</Text>
           </Pressable>
         </Link>
 
@@ -64,7 +64,7 @@ export default function MoreScreen() {
             <View className="w-14 items-center justify-center">
               <DocumentTextIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
-            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Assignments</Text>
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Assignments</Text>
           </Pressable>
         </Link>
 
@@ -73,7 +73,7 @@ export default function MoreScreen() {
             <View className="w-14 items-center justify-center">
               <CurrencyRupeeIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
-            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Fee Details</Text>
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Fee Details</Text>
           </Pressable>
         </Link>
 
@@ -82,7 +82,7 @@ export default function MoreScreen() {
             <View className="w-14 items-center justify-center">
               <BookOpenIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
-            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Library</Text>
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Library</Text>
           </Pressable>
         </Link>
 
@@ -90,7 +90,7 @@ export default function MoreScreen() {
           <View className="w-14 items-center justify-center">
             <CakeIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
           </View>
-          <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Mess Menu</Text>
+          <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Mess Menu</Text>
         </View>
 
         <Link href="/JoinClub" asChild>
@@ -98,7 +98,7 @@ export default function MoreScreen() {
             <View className="w-14 items-center justify-center">
               <UserGroupIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
-            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Join Club</Text>
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Join Club</Text>
           </Pressable>
         </Link>
 
@@ -106,7 +106,7 @@ export default function MoreScreen() {
           <View className="w-14 items-center justify-center">
             <CalendarIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
           </View>
-          <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Calendar</Text>
+          <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Calendar</Text>
         </View>
 
         <Link href="/LeaveOutingDetails" asChild>
@@ -114,7 +114,7 @@ export default function MoreScreen() {
             <View className="w-14 items-center justify-center">
               <MapPinIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
-            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">
               Leave/Outing Details
             </Text>
           </Pressable>
@@ -127,7 +127,7 @@ export default function MoreScreen() {
             <View className="w-14 items-center justify-center">
               <Cog8ToothIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
-            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Settings</Text>
+            <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Settings</Text>
           </Pressable>
         </Link>
 
@@ -135,7 +135,7 @@ export default function MoreScreen() {
           <View className="w-14 items-center justify-center">
             <ArrowRightOnRectangleIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
           </View>
-          <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 font-medium">Log Out</Text>
+          <Text className="text-lg ml-4 text-gray-900 dark:text-gray-100 ">Log Out</Text>
         </View>
       </View>
     </ScrollView>
