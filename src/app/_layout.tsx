@@ -24,7 +24,7 @@ export default function RootLayout() {
   const { colorScheme } = useColorScheme();
   NavigationBar.setBackgroundColorAsync(colorScheme == 'light' ? 'white' : '#1F2937')
   // StatusBar.setStatusBarBackgroundColor('light-content', true)
-  StatusBar.setBackgroundColor("#16A34A");
+  // StatusBar.setBackgroundColor("#16A34A");
   StatusBar.setBarStyle("light-content");
   const [loaded, error] = useFonts({
     SpaceMono: require("../../assets/fonts/SpaceMono-Regular.ttf"),

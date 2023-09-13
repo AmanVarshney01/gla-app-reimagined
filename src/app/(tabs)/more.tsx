@@ -20,11 +20,11 @@ import {
 export default function MoreScreen() {
   const { colorScheme } = useColorScheme();
   return (
-    <ScrollView showsVerticalScrollIndicator={false} className="bg-gray-200 dark:bg-gray-900">
+    <ScrollView showsVerticalScrollIndicator={false} className="bg-gray-100 dark:bg-gray-900">
       <View className="flex-1 p-4 w-full bg-white dark:bg-gray-900 rounded-lg">
 
         <Link href="/Attendance" asChild>
-          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg">
+          <Pressable className="flex items-center flex-row w-full py-4 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg">
             <View className="w-14 items-center justify-center">
               <IdentificationIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
@@ -33,7 +33,7 @@ export default function MoreScreen() {
         </Link>
 
         <Link href="/Hostel" asChild>
-          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+          <Pressable className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
             <View className="w-14 items-center justify-center">
               <KeyIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
@@ -42,7 +42,7 @@ export default function MoreScreen() {
         </Link>
 
         <Link href="/Result" asChild>
-          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+          <Pressable className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
             <View className="w-14 items-center justify-center">
               <AcademicCapIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
@@ -51,7 +51,7 @@ export default function MoreScreen() {
         </Link>
 
         <Link href="/Timetable" asChild>
-          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+          <Pressable className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
             <View className="w-14 items-center justify-center">
               <CalendarDaysIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
@@ -60,7 +60,7 @@ export default function MoreScreen() {
         </Link>
 
         <Link href="/Assignments" asChild>
-          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+          <Pressable className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
             <View className="w-14 items-center justify-center">
               <DocumentTextIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
@@ -69,7 +69,7 @@ export default function MoreScreen() {
         </Link>
 
         <Link href="/FeeDetails" asChild>
-          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+          <Pressable className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
             <View className="w-14 items-center justify-center">
               <CurrencyRupeeIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
@@ -78,7 +78,7 @@ export default function MoreScreen() {
         </Link>
 
         <Link href="/Library" asChild>
-          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+          <Pressable className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
             <View className="w-14 items-center justify-center">
               <BookOpenIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
@@ -86,7 +86,7 @@ export default function MoreScreen() {
           </Pressable>
         </Link>
 
-        <View className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+        <View className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
           <View className="w-14 items-center justify-center">
             <CakeIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
           </View>
@@ -94,7 +94,7 @@ export default function MoreScreen() {
         </View>
 
         <Link href="/JoinClub" asChild>
-          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+          <Pressable className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
             <View className="w-14 items-center justify-center">
               <UserGroupIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
@@ -102,7 +102,7 @@ export default function MoreScreen() {
           </Pressable>
         </Link>
 
-        <View className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+        <View className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
           <View className="w-14 items-center justify-center">
             <CalendarIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
           </View>
@@ -110,7 +110,7 @@ export default function MoreScreen() {
         </View>
 
         <Link href="/LeaveOutingDetails" asChild>
-          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+          <Pressable className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
             <View className="w-14 items-center justify-center">
               <MapPinIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
@@ -123,7 +123,7 @@ export default function MoreScreen() {
         <View className="w-full border-b border-b-stroke/10 my-3 dark:border-gray-700"></View>
 
         <Link href={"/Settings"} asChild>
-          <Pressable className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg">
+          <Pressable className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg">
             <View className="w-14 items-center justify-center">
               <Cog8ToothIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
             </View>
@@ -131,7 +131,7 @@ export default function MoreScreen() {
           </Pressable>
         </Link>
 
-        <View className="flex items-center flex-row w-full py-4 dark:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
+        <View className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg mt-2">
           <View className="w-14 items-center justify-center">
             <ArrowRightOnRectangleIcon color={colorScheme == 'light' ? '#18181B' : '#F4F4F5'} size={26} />
           </View>
