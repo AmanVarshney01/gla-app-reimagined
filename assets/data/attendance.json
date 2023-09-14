@@ -1,0 +1,78 @@
+{
+  "lectures": [
+    {
+      "name": "Database Management System",
+      "subjectCode": "DBMS",
+      "attendancePercentage": 80,
+      "attendedClasses": 8,
+      "totalClasses": 10,
+      "faculty": "Faculty Name"
+    },
+    {
+      "name": "Object Oriented Programming",
+      "subjectCode": "OOP",
+      "attendancePercentage": 70,
+      "attendedClasses": 7,
+      "totalClasses": 10,
+      "faculty": "Faculty Name"
+    },
+    {
+      "name": "Computer Organization",
+      "subjectCode": "CO",
+      "attendancePercentage": 0,
+      "attendedClasses": 0,
+      "totalClasses": 0,
+      "faculty": "Faculty Name"
+    },
+    {
+      "name": "Discrete Mathematics",
+      "subjectCode": "DM",
+      "attendancePercentage": 0,
+      "attendedClasses": 0,
+      "totalClasses": 0,
+      "faculty": "Faculty Name"
+    },
+    {
+      "name": "English For Professional Purposes-I",
+      "subjectCode": "EPP-I",
+      "attendancePercentage": 0,
+      "attendedClasses": 0,
+      "totalClasses": 0,
+      "faculty": "Faculty Name"
+    },
+    {
+      "name": "Coding and Programming Aptitude",
+      "subjectCode": "CPA",
+      "attendancePercentage": 0,
+      "attendedClasses": 0,
+      "totalClasses": 0,
+      "faculty": "Faculty Name"
+    }
+  ],
+  "labs": [
+    {
+      "name": "dbms lab",
+      "subjectCode": "DBMS-LAB",
+      "attendancePercentage": 0,
+      "attendedClasses": 0,
+      "totalClasses": 0,
+      "faculty": "Faculty Name"
+    },
+    {
+      "name": "oops lab",
+      "subjectCode": "OOP-LAB",
+      "attendancePercentage": 0,
+      "attendedClasses": 0,
+      "totalClasses": 0,
+      "faculty": "Faculty Name"
+    },
+    {
+      "name": "Computer Organization Lab",
+      "subjectCode": "CO-LAB",
+      "attendancePercentage": 0,
+      "attendedClasses": 0,
+      "totalClasses": 0,
+      "faculty": "Faculty Name"
+    }
+  ]
+}
