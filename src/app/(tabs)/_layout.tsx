@@ -4,9 +4,9 @@ import { View, Text } from "react-native";
 import { HomeIcon, BellIcon, PhoneIcon, Bars3Icon, UserIcon } from "react-native-heroicons/solid";
 
 const HomeHeader = () => (
-  <View style={{ justifyContent: 'center' }}>
-    <Text style={{ color: '#fffffe', fontWeight: 'bold', fontSize: 20 }}>GLA University</Text>
-    <Text style={{ color: '#fffffe', fontSize: 18, marginTop: -2 }}>Mathura</Text>
+  <View>
+    <Text className=" font-bold text-xl text-gray-100">GLA University</Text>
+    <Text className=" text-gray-100/80 text-lg -mt-1">Mathura</Text>
   </View>
 )
 

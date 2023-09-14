@@ -18,7 +18,7 @@ import { Link } from "expo-router";
 import { useColorScheme } from "nativewind";
 
 export default function HomeScreen() {
-  const {colorScheme} = useColorScheme();
+  const { colorScheme } = useColorScheme();
   const [refreshing, setRefreshing] = useState(false);
   const currentProfile = profile1[0];
   const onRefresh = useCallback(() => {
@@ -71,7 +71,7 @@ export default function HomeScreen() {
                 tintColor={
                   currentProfile.attendance >= 75 ? "#10B981" : "#EF4444"
                 }
-                backgroundColor = {colorScheme == "light" ? "#F3F4F6" : "#374151"}
+                backgroundColor={colorScheme == "light" ? "#F3F4F6" : "#374151"}
                 rotation={0}
                 lineCap="round"
                 children={(fill) => (
@@ -81,35 +81,37 @@ export default function HomeScreen() {
               <Text className="mt-2 text-gray-700 dark:text-gray-200 text-base">Attendance</Text>
             </Pressable>
           </Link>
-          <View className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex-1 p-2">
-            <View className="flex-1">
-              <Text className="text-xs dark:text-gray-200">Upcoming Class</Text>
-              <View className="my-2">
-                <Text className="text-gray-900 dark:text-gray-200 text-lg leading-5 mb-1">
-                  Object Oriented Programming Lab
-                </Text>
-                <Text className="text-gray-700 dark:text-gray-200 text-sm -mt-1 mb-3">BCSC 0801</Text>
-                <View className="flex-row border dark:border-gray-200 rounded-lg justify-evenly divide-x dark:divide-gray-200">
-                  <View className="px-2">
-                    <Text className="text-xs text-center dark:text-gray-200">
-                      AB-VIII 311
-                    </Text>
-                  </View>
-                  <View className="flex-1 px-1">
-                    <Text className="text-xs text-center dark:text-gray-200">
-                      1:00PM-2:00PM
-                    </Text>
+
+          <Link href="/Timetable" asChild>
+            <Pressable className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex-1 p-2">
+              <View className="flex-1">
+                <Text className="text-xs dark:text-gray-200">Upcoming Class</Text>
+                <View className="my-2">
+                  <Text className="text-gray-900 dark:text-gray-200 text-lg leading-5 mb-1">
+                    Object Oriented Programming Lab
+                  </Text>
+                  <Text className="text-gray-700 dark:text-gray-200 text-sm -mt-1 mb-3">BCSC 0801</Text>
+                  <View className="flex-row border dark:border-gray-200 rounded-lg justify-evenly divide-x dark:divide-gray-200">
+                    <View className="px-2">
+                      <Text className="text-xs text-center dark:text-gray-200">
+                        AB-VIII 311
+                      </Text>
+                    </View>
+                    <View className="flex-1 px-1">
+                      <Text className="text-xs text-center dark:text-gray-200">
+                        1:00PM-2:00PM
+                      </Text>
+                    </View>
                   </View>
                 </View>
               </View>
-            </View>
-            <Link href="/Timetable" asChild>
-              <Pressable className="border-t p-1 mt-1 flex-row justify-between items-center bg-gray-100 dark:bg-gray-900">
+              <View className="border-t p-1 mt-1 flex-row justify-between items-center bg-gray-100 dark:bg-gray-900">
                 <Text className="text-green-600">View</Text>
                 <ChevronRightIcon color="#10B981" size={18} />
-              </Pressable>
-            </Link>
-          </View>
+              </View>
+            </Pressable>
+          </Link>
+
         </View>
         <View className="bg-white dark:bg-gray-800 shadow-lg rounded-lg mt-3 p-1 w-full">
           <FlatList
@@ -124,31 +126,35 @@ export default function HomeScreen() {
             )}
           />
         </View>
+
         <View className="flex-row mt-3 w-full">
-          <View className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-2 mr-2">
-            <View className="mb-2">
-              <Text className="text-gray-900 dark:text-gray-200 text-3xl">3</Text>
-              <Text className="text-gray-700 dark:text-gray-300 text-base">Assignments due</Text>
-            </View>
-            <Link href="/Assignments" asChild>
-              <Pressable className="border-t p-1 flex-row justify-between items-center bg-gray-100 dark:bg-gray-900">
+
+          <Link href="/Assignments" asChild>
+            <Pressable className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-2 mr-2">
+              <View className="mb-2">
+                <Text className="text-gray-900 dark:text-gray-200 text-3xl">3</Text>
+                <Text className="text-gray-700 dark:text-gray-300 text-base">Assignments due</Text>
+              </View>
+              <View className="border-t p-1 flex-row justify-between items-center bg-gray-100 dark:bg-gray-900">
                 <Text className="text-green-600">View</Text>
                 <ChevronRightIcon color="#10B981" size={18} />
-              </Pressable>
-            </Link>
-          </View>
-          <View className="bg-white dark:bg-gray-800 shadow-lg rounded-lg flex-1 p-2">
+              </View>
+            </Pressable>
+          </Link>
+
+          <Link href="/Result" asChild>
+          <Pressable className="bg-white dark:bg-gray-800 shadow-lg rounded-lg flex-1 p-2">
             <View className="mb-2">
               <Text className="text-gray-900 dark:text-gray-200 text-3xl">93.50%</Text>
               <Text className="text-gray-700 dark:text-gray-300 text-base">Percentage</Text>
             </View>
-            <Link href="/Result" asChild>
-              <Pressable className="border-t p-1 flex-row justify-between items-center bg-gray-100 dark:bg-gray-900">
+              <View className="border-t p-1 flex-row justify-between items-center bg-gray-100 dark:bg-gray-900">
                 <Text className="text-green-600">View</Text>
                 <ChevronRightIcon color="#10B981" size={18} />
-              </Pressable>
-            </Link>
-          </View>
+              </View>
+          </Pressable>
+          </Link>
+
         </View>
         <View className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-2 mt-3 w-full">
           <View className="border-b border-gray-200 pb-2">
@@ -172,7 +178,7 @@ export default function HomeScreen() {
               )}
             />
           </View>
-          
+
         </View>
       </View>
     </ScrollView>

@@ -51,7 +51,7 @@
   ],
   "labs": [
     {
-      "name": "dbms lab",
+      "name": "Database Management System Lab",
       "subjectCode": "DBMS-LAB",
       "attendancePercentage": 0,
       "attendedClasses": 0,
@@ -59,7 +59,7 @@
       "faculty": "Faculty Name"
     },
     {
-      "name": "oops lab",
+      "name": "Object Oriented Programming Lab",
       "subjectCode": "OOP-LAB",
       "attendancePercentage": 0,
       "attendedClasses": 0,

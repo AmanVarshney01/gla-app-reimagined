@@ -120,7 +120,7 @@ export default function MoreScreen() {
           </Pressable>
         </Link>
 
-        <View className="w-full border-b border-b-stroke/10 my-3 dark:border-gray-700"></View>
+        <View className="w-full border-b border-b-black/10 my-3 dark:border-gray-700"></View>
 
         <Link href={"/Settings"} asChild>
           <Pressable className="flex items-center flex-row w-full py-4  active:bg-gray-200 dark:active:bg-gray-700 rounded-lg">
