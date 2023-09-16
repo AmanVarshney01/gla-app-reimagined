@@ -22,17 +22,17 @@ export default function Assignments() {
         setModalVisible(!modalVisible);
       }}>
         <View className='flex-1 justify-end items-center bg-black/50'>
-          <View className='w-full min-h-[45vh] bg-gray-100 dark:bg-gray-800 rounded-t-3xl p-4 shadow-lg shadow-black'>
-            {/* <View className=' mb-2 pb-1 border-b border-gray-300'>
+          <View className='w-full min-h-[45vh] bg-neutral-100 dark:bg-neutral-800 rounded-t-3xl p-4 shadow-lg shadow-black'>
+            {/* <View className=' mb-2 pb-1 border-b border-neutral-300'>
               <Pressable className=' items-end' onPress={() => setModalVisible(!modalVisible)}>
                 <XMarkIcon color={'#EF4444'} size={26} />
               </Pressable>
             </View> */}
-            <Text className='text-xl font-bold mb-4 text-gray-900 dark:text-gray-100'>{subject}</Text>
-            <Text className='text-gray-500 dark:text-gray-400 text-lg mb-2'>{title}</Text>
-            <Text className='text-gray-500 dark:text-gray-400 text-lg mb-2'>Last Date: {lastDate}</Text>
-            <Text className='text-gray-500 dark:text-gray-400 text-lg mb-2'>Max Marks: {maxMarks}</Text>
-            <Text className='text-gray-500 dark:text-gray-400 text-lg mb-2'>Status: {status}</Text>
+            <Text className='text-xl font-bold mb-4 text-neutral-900 dark:text-neutral-100'>{subject}</Text>
+            <Text className='text-neutral-500 dark:text-neutral-400 text-lg mb-2'>{title}</Text>
+            <Text className='text-neutral-500 dark:text-neutral-400 text-lg mb-2'>Last Date: {lastDate}</Text>
+            <Text className='text-neutral-500 dark:text-neutral-400 text-lg mb-2'>Max Marks: {maxMarks}</Text>
+            <Text className='text-neutral-500 dark:text-neutral-400 text-lg mb-2'>Status: {status}</Text>
             <View className='flex-row mt-4'>
               <Pressable className='bg-blue-500 dark:bg-blue-700 px-4 py-2 rounded-lg mr-4'>
                 <Text className='text-white text-base'>Download</Text>
@@ -53,8 +53,8 @@ export default function Assignments() {
             </View>
             <Pressable
               onPress={() => setModalVisible(!modalVisible)}
-              className='mt-4 bg-gray-400 dark:bg-gray-700 px-4 py-2 rounded-lg items-center justify-center'>
-              <Text className=' text-gray-100 text-base'>Close</Text>
+              className='mt-4 bg-neutral-400 dark:bg-neutral-700 px-4 py-2 rounded-lg items-center justify-center'>
+              <Text className=' text-neutral-100 text-base'>Close</Text>
             </Pressable>
           </View>
         </View>
@@ -63,8 +63,8 @@ export default function Assignments() {
   }
 
   return (
-    <ScrollView className='bg-gray-100 dark:bg-gray-900 flex-1' showsVerticalScrollIndicator={false}>
-      <View className='rounded-lg p-4 bg-gray-100 dark:bg-gray-900'>
+    <ScrollView className='bg-neutral-100 dark:bg-neutral-900' showsVerticalScrollIndicator={false}>
+      <View className='rounded-lg p-2 bg-neutral-100 dark:bg-neutral-900'>
         <FlatList
           scrollEnabled={false}
           data={assignments}
@@ -74,10 +74,10 @@ export default function Assignments() {
               onPress={() => {
                 setSelectedItem(item);
                 setModalVisible(true);
-              }} key={item.title} className='bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-4 flex-row justify-between p-4 items-center active:bg-gray-200 dark:active:bg-gray-700'>
+              }} key={item.title} className='bg-white dark:bg-neutral-800 rounded-lg shadow-lg mb-4 flex-row justify-between p-4 items-center active:bg-neutral-200 dark:active:bg-neutral-700'>
               <View className=''>
-                <Text className='text-gray-900 dark:text-gray-100 text-base'>{item.subject}</Text>
-                <Text className='text-gray-500 dark:text-gray-400'>{item.title}</Text>
+                <Text className='text-neutral-900 dark:text-neutral-100 text-base'>{item.subject}</Text>
+                <Text className='text-neutral-500 dark:text-neutral-400'>{item.title}</Text>
               </View>
               <ChevronRightIcon
                 color={'#10B981'}

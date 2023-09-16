@@ -5,8 +5,8 @@ import { HomeIcon, BellIcon, PhoneIcon, Bars3Icon, UserIcon } from "react-native
 
 const HomeHeader = () => (
   <View>
-    <Text className=" font-bold text-xl text-gray-100">GLA University</Text>
-    <Text className=" text-gray-100/80 text-lg -mt-1">Mathura</Text>
+    <Text className=" font-bold text-xl text-neutral-100">GLA University</Text>
+    <Text className=" text-neutral-100/80 text-lg -mt-1">Mathura</Text>
   </View>
 )
 
@@ -26,7 +26,7 @@ export default function TabLayout() {
         tabBarActiveBackgroundColor: "#16A34A",
         tabBarShowLabel: false,
         tabBarStyle: {
-          backgroundColor: colorScheme == "light" ? "#fffffe" : "#1F2937",
+          backgroundColor: colorScheme == "light" ? "#fffffe" : "rgb(23 23 23)",
           borderTopColor: "#232323",
           borderBottomWidth: 0,
           height: 60,

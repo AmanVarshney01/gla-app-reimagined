@@ -10,7 +10,7 @@
     },
     {
       "name": "Object Oriented Programming",
-      "subjectCode": "OOP",
+      "subjectCode": "BCSC 1001",
       "attendancePercentage": 70,
       "attendedClasses": 7,
       "totalClasses": 10,
@@ -18,15 +18,15 @@
     },
     {
       "name": "Computer Organization",
-      "subjectCode": "CO",
-      "attendancePercentage": 0,
-      "attendedClasses": 0,
-      "totalClasses": 0,
+      "subjectCode": "BCSC 1005",
+      "attendancePercentage": 54,
+      "attendedClasses": 5,
+      "totalClasses": 50,
       "faculty": "Faculty Name"
     },
     {
       "name": "Discrete Mathematics",
-      "subjectCode": "DM",
+      "subjectCode": "BCSC 1010",
       "attendancePercentage": 0,
       "attendedClasses": 0,
       "totalClasses": 0,
@@ -34,7 +34,7 @@
     },
     {
       "name": "English For Professional Purposes-I",
-      "subjectCode": "EPP-I",
+      "subjectCode": "BELH 1003",
       "attendancePercentage": 0,
       "attendedClasses": 0,
       "totalClasses": 0,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Object Oriented Programming Lab",
-      "subjectCode": "OOP-LAB",
+      "subjectCode": "BCSC 0801",
       "attendancePercentage": 0,
       "attendedClasses": 0,
       "totalClasses": 0,

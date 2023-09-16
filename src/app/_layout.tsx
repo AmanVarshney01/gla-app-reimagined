@@ -22,7 +22,9 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const { colorScheme } = useColorScheme();
-  NavigationBar.setBackgroundColorAsync(colorScheme == 'light' ? 'white' : '#1F2937')
+  NavigationBar.setBackgroundColorAsync(
+    colorScheme == "light" ? "white" : "rgb(23 23 23)"
+  );
   // StatusBar.setStatusBarBackgroundColor('light-content', true)
   // StatusBar.setBackgroundColor("#16A34A");
   StatusBar.setBarStyle("light-content");
@@ -62,22 +64,33 @@ function RootLayoutNav() {
       <Stack.Screen name="Settings" />
       <Stack.Screen name="Attendance" />
       <Stack.Screen name="Hostel" />
-      <Stack.Screen name="Result/index" options={{
-        title: 'Result',
-      }} />
-      <Stack.Screen name="Timetable" options={{
-        title: 'Timetable',
-        // presentation: 'modal'
-      }} />
-      <Stack.Screen name="JoinClub" options={{
-        title: 'Join Club'
-      }} />
-      <Stack.Screen name="FeeDetails" options={{
-        title: "Fee Details"
-      }} />
+      <Stack.Screen
+        name="Result/index"
+        options={{
+          title: "Result",
+        }}
+      />
+      <Stack.Screen
+        name="Timetable"
+        options={{
+          title: "Timetable",
+          // presentation: 'modal'
+        }}
+      />
+      <Stack.Screen
+        name="JoinClub"
+        options={{
+          title: "Join Club",
+        }}
+      />
+      <Stack.Screen
+        name="FeeDetails"
+        options={{
+          title: "Fee Details",
+        }}
+      />
       <Stack.Screen name="Assignments" />
       <Stack.Screen name="Library" />
     </Stack>
   );
 }
-
