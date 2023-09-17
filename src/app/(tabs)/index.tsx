@@ -30,7 +30,7 @@ export default function HomeScreen() {
 
   return (
     <ScrollView
-      className=""
+      className="bg-neutral-100 dark:bg-neutral-900"
       showsVerticalScrollIndicator={false}
       refreshControl={
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
@@ -163,7 +163,7 @@ export default function HomeScreen() {
                   93.50%
                 </Text>
                 <Text className="text-neutral-700 dark:text-neutral-300 text-base">
-                  Percentage
+                  Result
                 </Text>
               </View>
               <View className="border-t p-1 flex-row justify-between items-center bg-neutral-100 dark:bg-neutral-900">

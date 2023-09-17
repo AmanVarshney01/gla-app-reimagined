@@ -1,52 +1,134 @@
-import { View, Text } from "react-native";
-import { BarChart } from "react-native-chart-kit";
-import { Dimensions } from "react-native";
+import { View, Text, ScrollView, Pressable, FlatList } from "react-native";
+import { useState } from "react";
+import ResultChart from "@/components/ResultChart";
+import result from "../../../assets/data/result.json";
 
 export default function Result() {
-  const data = {
-    labels: ["Math", "Science", "History", "English", "Art"],
-    datasets: [
-      {
-        data: [90, 85, 50, 95, 80],
-      },
-    ],
+  type semesterData = {
+    subjects: {
+      subjectCode: string;
+      grade: string;
+      gp: string;
+      credit: string;
+    }[];
+    practicals: {
+      subjectCode: string;
+      grade: string;
+      gp: string;
+      credit: string;
+    }[];
+    stc: string;
+    sgp: string;
+    spi: string;
+    cc: string;
+    cgp: string;
+    cpi: string;
   };
 
-  return (
-    <View className=" flex-1 bg-neutral-100">
-      <Text className="">Result</Text>
+  const [selectedSemester, setSelectedSemester] = useState<string>("semester2");
+  const [isSelectedPracticals, setIsSelectedPracticals] =
+    useState<boolean>(false);
 
-      <View className=" justify-center items-center">
-        <BarChart
-        style={{marginVertical: 8, borderRadius: 16, paddingTop: 20}}
-          data={data}
-          width={Dimensions.get("window").width -20}
-          height={220}
-          yAxisSuffix="%"
-          yAxisLabel=""
-          yLabelsOffset={20}
-          segments={4}
-          fromNumber={data.datasets[0].data.reduce((a, b) => Math.min(a, b))}
-          showBarTops={false}
-          showValuesOnTopOfBars={true}
-          chartConfig={{
-            backgroundGradientFrom: "#ffffff",
-            backgroundGradientTo: "#ffffff",
-            color: (opacity = 1) => `rgba(23, 23, 23, ${opacity})`,
-            // labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-            fillShadowGradientFrom: "#16A34A",
-            fillShadowGradientTo: "#ffffff",
-            fillShadowGradientFromOpacity: 1,
-            fillShadowGradientToOpacity: 0,
-            decimalPlaces: 0,
-            barPercentage: 0.5,
-            propsForBackgroundLines: {
-              strokeWidth: 0,
-            },
-            // useShadowColorFromDataset: true, // optional
-          }}
-        />
+  const resultData: Record<string, semesterData> = result;
+
+  return (
+    <ScrollView className="" showsVerticalScrollIndicator={false}>
+      <View className=" flex-1 bg-neutral-100">
+        {/* <Text className="">Result</Text> */}
+
+        {/* <ScrollView horizontal={true} className="">
+        <ResultChart/>
+      </ScrollView> */}
+
+        <View className=" flex-row">
+          <Pressable
+            onPress={() => setSelectedSemester("semester1")}
+            style={{
+              backgroundColor:
+                selectedSemester == "semester1" ? "gray" : "transparent",
+            }}
+          >
+            <Text>Semester I</Text>
+          </Pressable>
+          <Pressable
+            onPress={() => setSelectedSemester("semester2")}
+            style={{
+              backgroundColor:
+                selectedSemester == "semester2" ? "gray" : "transparent",
+            }}
+          >
+            <Text>Semester II</Text>
+          </Pressable>
+        </View>
+        <View className=" p-2">
+          <View className=" flex-row">
+            <View className=" w-[40%] items-center">
+              <Text className=" text-lg ">Subject Code</Text>
+            </View>
+            <View className=" w-[20%] items-center">
+              <Text className=" text-lg ">Grade</Text>
+            </View>
+            <View className=" w-[20%] items-center">
+              <Text className=" text-lg ">GP</Text>
+            </View>
+            <View className=" w-[20%] items-center">
+              <Text className=" text-lg ">Credit</Text>
+            </View>
+          </View>
+          <FlatList
+            scrollEnabled={false}
+            data={resultData[selectedSemester].subjects}
+            keyExtractor={(item) => item.subjectCode}
+            renderItem={({ item }) => (
+              <View className=" flex-row justify-between">
+                <View className=" w-[40%] border items-center">
+                  <Text className=" text-base">{item.subjectCode}</Text>
+                </View>
+                <View className=" w-[20%] border  items-center">
+                  <Text className=" text-base">{item.grade}</Text>
+                </View>
+                <View className=" w-[20%] border  items-center">
+                  <Text className=" text-base">{item.gp}</Text>
+                </View>
+                <View className=" w-[20%] border items-center">
+                  <Text className=" text-base">{item.credit}</Text>
+                </View>
+              </View>
+            )}
+          />
+          <View className=" border"></View>
+          <FlatList
+            scrollEnabled={false}
+            data={resultData[selectedSemester].practicals}
+            keyExtractor={(item) => item.subjectCode}
+            renderItem={({ item }) => (
+              <View className=" flex-row justify-between">
+                <View className=" w-[40%] border items-center">
+                  <Text className=" text-base">{item.subjectCode}</Text>
+                </View>
+                <View className=" w-[20%] border  items-center">
+                  <Text className=" text-base">{item.grade}</Text>
+                </View>
+                <View className=" w-[20%] border  items-center">
+                  <Text className=" text-base">{item.gp}</Text>
+                </View>
+                <View className=" w-[20%] border items-center">
+                  <Text className=" text-base">{item.credit}</Text>
+                </View>
+              </View>
+            )}
+          />
+          <View className=" border"></View>
+          <View className=" flex-row justify-between">
+            <Text>STC: {resultData[selectedSemester].stc}</Text>
+            <Text>SGP: {resultData[selectedSemester].sgp}</Text>
+            <Text>SPI: {resultData[selectedSemester].spi}</Text>
+            <Text>CC: {resultData[selectedSemester].cc}</Text>
+            <Text>CGP: {resultData[selectedSemester].cgp}</Text>
+            <Text>CPI: {resultData[selectedSemester].cpi}</Text>
+          </View>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }

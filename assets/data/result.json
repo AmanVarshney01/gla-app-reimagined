@@ -1,0 +1,42 @@
+{
+  "semester1": {
+    "subjects": [
+      { "subjectCode": "BCHS 0101", "grade": "A", "gp": "4.0", "credit": "3" },
+      { "subjectCode": "BCGS 0919", "grade": "B+", "gp": "3.0", "credit": "4" },
+      { "subjectCode": "BCGS 0929", "grade": "C", "gp": "2.0", "credit": "3" },
+      { "subjectCode": "BCGS 0939", "grade": "A+", "gp": "4.0", "credit": "3" },
+      { "subjectCode": "BCGS 0949", "grade": "B", "gp": "3.0", "credit": "4" }
+    ],
+    "practicals": [
+      { "subjectCode": "BCGS 0959", "grade": "A+", "gp": "4.0", "credit": "2" },
+      { "subjectCode": "BCGS 0969", "grade": "B", "gp": "3.0", "credit": "2" },
+      { "subjectCode": "BCGS 0979", "grade": "C", "gp": "2.0", "credit": "2" }
+    ],
+    "stc": "24",
+    "sgp": "359",
+    "spi": "3.6",
+    "cc": "78",
+    "cgp": "178",
+    "cpi": "3.72"
+  },
+  "semester2": {
+    "subjects": [
+      { "subjectCode": "BCGS 0989", "grade": "B", "gp": "3.0", "credit": "3" },
+      { "subjectCode": "BCGS 0999", "grade": "C+", "gp": "2.0", "credit": "4" },
+      { "subjectCode": "BCGS 0109", "grade": "A+", "gp": "4.0", "credit": "3" },
+      { "subjectCode": "BCGS 0119", "grade": "B", "gp": "3.0", "credit": "3" },
+      { "subjectCode": "BCGS 0129", "grade": "O", "gp": "2.0", "credit": "4" }
+    ],
+    "practicals": [
+      { "subjectCode": "BCGS 0139", "grade": "A", "gp": "4.0", "credit": "2" },
+      { "subjectCode": "BCGS 0149", "grade": "B", "gp": "3.0", "credit": "2" },
+      { "subjectCode": "BCGS 0159", "grade": "C", "gp": "2.0", "credit": "2" }
+    ],
+    "stc": "24",
+    "sgp": "399",
+    "spi": "3.4",
+    "cc": "98",
+    "cgp": "178",
+    "cpi": "3.59"
+  }
+}
