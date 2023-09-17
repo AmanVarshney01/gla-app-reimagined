@@ -12,7 +12,7 @@ import {
   KeyIcon,
   CalendarIcon,
   BookOpenIcon,
-  CakeIcon,
+  // CakeIcon,
   ArrowRightOnRectangleIcon,
   DocumentTextIcon,
 } from "react-native-heroicons/solid";
@@ -123,7 +123,7 @@ export default function MoreScreen() {
           </Pressable>
         </Link>
 
-        <View className="flex items-center flex-row w-full py-4  active:bg-neutral-200 dark:active:bg-neutral-700 rounded-lg mt-2">
+        {/* <View className="flex items-center flex-row w-full py-4  active:bg-neutral-200 dark:active:bg-neutral-700 rounded-lg mt-2">
           <View className="w-14 items-center justify-center">
             <CakeIcon
               color={colorScheme == "light" ? "#18181B" : "#F4F4F5"}
@@ -133,7 +133,7 @@ export default function MoreScreen() {
           <Text className="text-lg ml-4 text-neutral-900 dark:text-neutral-100 ">
             Mess Menu
           </Text>
-        </View>
+        </View> */}
 
         <Link href="/JoinClub" asChild>
           <Pressable className="flex items-center flex-row w-full py-4  active:bg-neutral-200 dark:active:bg-neutral-700 rounded-lg mt-2">

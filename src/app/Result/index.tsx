@@ -35,7 +35,7 @@ export default function Result() {
       className=" bg-neutral-100 dark:bg-neutral-900"
       showsVerticalScrollIndicator={false}
     >
-      <View className=" flex-1 bg-neutral-100 p-2 gap-2 dark:bg-neutral-900">
+      <View className=" bg-neutral-100 p-2 gap-2 dark:bg-neutral-900">
         {/* <Text className="">Result</Text> */}
 
         {/* <ScrollView horizontal={true} className="">

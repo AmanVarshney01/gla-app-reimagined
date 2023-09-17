@@ -25,10 +25,10 @@ const AttendanceList = (item: AttendanceData) => {
           </Text>
         </View>
         <View className=" justify-center items-center flex-row">
-          <Text className="dark:text-blue-500 text-2xl">
+          <Text className="text-blue-500 text-2xl">
             {item.attendancePercentage}
           </Text>
-          <Text className="dark:text-blue-500 text-sm -mb-2">%</Text>
+          <Text className="text-blue-500 text-sm -mb-2">%</Text>
         </View>
       </View>
       <View className=" bg-white w-full justify-between pt-2 flex-row dark:bg-neutral-800">

@@ -93,7 +93,7 @@ export default function HomeScreen() {
           <Link href="/Timetable" asChild>
             <Pressable className="bg-white dark:bg-neutral-800 rounded-lg shadow-lg flex-1 p-2">
               <View className="flex-1">
-                <Text className="text-xs dark:text-neutral-200">
+                <Text className="text-xs text-neutral-800 dark:text-neutral-200">
                   Upcoming Class
                 </Text>
                 <View className="my-2">
