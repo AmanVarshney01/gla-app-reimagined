@@ -8,9 +8,10 @@ import {
 } from "react-native";
 import { useState, useRef, useMemo } from "react";
 import assignments from "../../assets/data/assignments.json";
-import { ChevronRightIcon, XMarkIcon } from "react-native-heroicons/solid";
+import { ChevronRightIcon, ArrowDownTrayIcon, ArrowUpTrayIcon } from "react-native-heroicons/solid";
 import BottomSheet from "@gorhom/bottom-sheet";
 import CustomBackdrop from "@/components/CustomBackdrop";
+import {useColorScheme} from 'nativewind'
 
 type AssignmentType = {
   subject: string;
@@ -21,10 +22,12 @@ type AssignmentType = {
 };
 
 export default function Assignments() {
+  const {colorScheme} = useColorScheme()
   const [selectedItem, setSelectedItem] = useState({} as AssignmentType);
+
   // const [modalVisible, setModalVisible] = useState(false);
   const bottomSheetRef = useRef<BottomSheet>(null);
-  const snapPoints = useMemo(() => ["30%", "55%"], []);
+  const snapPoints = useMemo(() => ["30%", "50%"], []);
 
   // const openModal = () => {
   //   bottomSheetRef.current?.
@@ -38,22 +41,16 @@ export default function Assignments() {
     status,
   }: AssignmentType) => {
     return (
-      // <Modal
-      //   transparent={true}
-      //   animationType="fade"
-      //   visible={modalVisible}
-      //   onRequestClose={() => {
-      //     setModalVisible(!modalVisible);
-      //   }}
-      // >
-      // <View className="flex-1 justify-end items-center">
       <View className="w-full bg-white dark:bg-neutral-800 rounded-t-3xl p-4">
         {/* <View className=' mb-2 pb-1 border-b border-neutral-300'>
               <Pressable className=' items-end' onPress={() => setModalVisible(!modalVisible)}>
                 <XMarkIcon color={'#EF4444'} size={26} />
               </Pressable>
             </View> */}
-        <Text className="text-xl font-bold mb-4 text-neutral-900 dark:text-neutral-100">
+        <View className=" items-center w-full rounded-t-3xl mb-4">
+          <View className="  w-10 h-1 bg-neutral-300 rounded-lg "></View>
+        </View>
+        <Text className=" text-lg font-bold mb-2 text-neutral-900 dark:text-neutral-100">
           {subject}
         </Text>
         <Text className="text-neutral-500 dark:text-neutral-400 text-lg mb-2">
@@ -69,12 +66,14 @@ export default function Assignments() {
           Status: {status}
         </Text>
         <View className="flex-row mt-4">
-          <Pressable className="bg-blue-500 dark:bg-blue-700 px-4 py-2 rounded-lg mr-4">
-            <Text className="text-white text-base">Download</Text>
+          <Pressable className="bg-blue-500 dark:bg-blue-700 px-4 py-2 rounded-lg mr-4 flex-row items-center">
+            <ArrowDownTrayIcon color={"white"} size={26} />
+            <Text className="text-white text-base ml-2">Download</Text>
           </Pressable>
           {status === "Not Submitted" ? (
-            <Pressable className="bg-green-500 dark:bg-green-700 px-4 py-2 rounded-lg">
-              <Text className="text-white text-base">Upload</Text>
+            <Pressable className="bg-green-500 dark:bg-green-700 px-4 py-2 rounded-lg flex-row items-center">
+              <ArrowUpTrayIcon color={"white"} size={26} />
+              <Text className="text-white text-base ml-2">Upload</Text>
             </Pressable>
           ) : status === "Submitted" ? (
             <Pressable className="bg-green-500/80 dark:bg-green-700/50 px-4 py-2 rounded-lg">
@@ -86,12 +85,12 @@ export default function Assignments() {
             </Pressable>
           )}
         </View>
-        <Pressable
+        {/* <Pressable
           onPress={() => bottomSheetRef.current?.forceClose()}
           className="mt-4 bg-neutral-400 dark:bg-neutral-700 px-4 py-2 rounded-lg items-center justify-center"
         >
           <Text className=" text-neutral-100 text-base">Close</Text>
-        </Pressable>
+        </Pressable> */}
       </View>
       // </View>
       // </Modal>
@@ -140,12 +139,13 @@ export default function Assignments() {
         snapPoints={snapPoints}
         handleComponent={null}
         // backdropComponent={<CustomBackdrop animatedIndex={0} animatedPosition={0} />}
-        backdropComponent={(props) => <CustomBackdrop  {...props} />}
-        
+        backdropComponent={(props) => <CustomBackdrop {...props} />}
         // bottomInset={46}
         // detached={false}
         enablePanDownToClose={true}
-
+        backgroundStyle={{
+          backgroundColor: colorScheme == 'light' ? 'white' : "rgb(38 38 38)"
+        }}
       >
         <AssignmentBottomSheet
           subject={selectedItem.subject}

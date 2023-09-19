@@ -1,0 +1,87 @@
+{
+  "hostel": [
+    {
+      "name": "Hostel 1",
+      "phoneNumber": 1234567890,
+      "email": "hostel1@example.com",
+      "role": "Hostel Coordinator"
+    },
+    {
+      "name": "Hostel 2",
+      "phoneNumber": 9876594321,
+      "email": "hostel2@example.com",
+      "role": "Hostel Coordinator"
+    }
+  ],
+  "fireSafety": [
+    {
+      "name": "Fire Safety 1",
+      "phoneNumber": 9876543210,
+      "email": "firesafety1@example.com",
+      "role": "Fire Safety Officer"
+    },
+    {
+      "name": "Fire Safety 2",
+      "phoneNumber": 8123456789,
+      "email": "firesafety2@example.com",
+      "role": "Fire Safety Officer"
+    }
+  ],
+  "antiRagging": [
+    {
+      "name": "Anti Ragging 1",
+      "phoneNumber": 7654321098,
+      "email": "antiragging1@example.com",
+      "role": "Anti Ragging Committee Member"
+    },
+    {
+      "name": "Anti Ragging 2",
+      "phoneNumber": 2345678901,
+      "email": "antiragging2@example.com",
+      "role": "Anti Ragging Committee Member"
+    }
+  ],
+  "medical": [
+    {
+      "name": "Medical 1",
+      "phoneNumber": 1111111111,
+      "email": "medical1@example.com",
+      "role": "Medical Officer"
+    },
+    {
+      "name": "Medical 2",
+      "phoneNumber": 2222222222,
+      "email": "medical2@example.com",
+      "role": "Medical Officer"
+    }
+  ],
+  "antiSexualHarassment": [
+    {
+      "name": "Anti Sexual Harassment 1",
+      "phoneNumber": 3333333333,
+      "email": "antish1@example.com",
+      "role": "Anti Sexual Harassment Committee Member"
+    },
+    {
+      "name": "Anti Sexual Harassment 2",
+      "phoneNumber": 4444444444,
+      "email": "antish2@example.com",
+      "role": "Anti Sexual Harassment Committee Member"
+    }
+  ],
+  "academic": [
+    {
+      "name": "Academic 1",
+      "phoneNumber": 5555555555,
+      "email": "academic1@example.com",
+      "role": "Academic Coordinator"
+    },
+    {
+      "name": "Academic 2",
+      "phoneNumber": 6666666666,
+      "email": "academic2@example.com",
+      "role": "Academic Coordinator"
+    }
+  ]
+}
+

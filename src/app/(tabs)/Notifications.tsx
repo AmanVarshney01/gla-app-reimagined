@@ -4,7 +4,7 @@ import { ScrollView } from "react-native-gesture-handler";
 
 export default function NotificationsScreen() {
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView showsVerticalScrollIndicator={false} className="bg-neutral-100 dark:bg-neutral-900">
       <View className="flex-1 bg-neutral-100 dark:bg-neutral-900 p-4">
         <FlatList
           scrollEnabled={false}

@@ -21,8 +21,8 @@ function Card2({ title, value }: { title: string; value: string | number }) {
 export default function ProfileScreen() {
   const currentProfile = profile1[0];
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <View className="flex-1 p-4 bg-neutral-100 dark:bg-neutral-900">
+    <ScrollView showsVerticalScrollIndicator={false} className="bg-neutral-100 dark:bg-neutral-900">
+      <View className="p-4 bg-neutral-100 dark:bg-neutral-900">
         <View className="flex justify-center items-center p-4 bg-white dark:bg-neutral-800 rounded-lg shadow-lg mb-2">
           <Image
             className="w-32 h-32 rounded-full"

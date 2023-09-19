@@ -5,6 +5,7 @@ import AttendanceList from "@/components/AttendanceList";
 import profile1 from "../../assets/data/profile1.json";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
 import { useColorScheme } from "nativewind";
+import Chart from "@/components/Chart";
 
 type AttendanceData = {
   name: string;
@@ -42,7 +43,7 @@ export default function Attendance() {
       <View className="flex-1 p-2">
         <View className="bg-white dark:bg-neutral-800 rounded-lg p-4 flex-row justify-between">
           <View className="">
-          <Text className="text-base text-neutral-900 dark:text-neutral-100">
+            <Text className="text-base text-neutral-900 dark:text-neutral-100">
               Total: 30
             </Text>
             <Text className="text-base text-neutral-900 dark:text-neutral-100">
@@ -62,7 +63,9 @@ export default function Attendance() {
               tintColor={
                 currentProfile.attendance >= 75 ? "rgb(22 163 74)" : "#EF4444"
               }
-              backgroundColor={colorScheme == "light" ? "#F3F4F6" : "rgb(23 23 23)"}
+              backgroundColor={
+                colorScheme == "light" ? "#F3F4F6" : "rgb(23 23 23)"
+              }
               rotation={0}
               lineCap="round"
               children={(fill) => (
@@ -73,6 +76,9 @@ export default function Attendance() {
             />
           </View>
         </View>
+        <ScrollView className=" mt-2 pt-2 bg-white dark:bg-neutral-800" showsHorizontalScrollIndicator={false} overScrollMode="never" horizontal={true}>
+          <Chart />
+        </ScrollView>
         {/* <View>
           <Text>Subject wise attendance</Text>
         </View> */}
@@ -81,19 +87,43 @@ export default function Attendance() {
             className="py-4 px-2 flex-1 justify-center items-center rounded-tl-lg bg-white dark:bg-neutral-800"
             onPress={() => setSelectedMenu("lectures")}
             style={{
-              backgroundColor: selectedMenu == "lectures" ? colorScheme == "light" ? "#16A34A" : "#71717A" : colorScheme == "light" ? "#E4E4E7" : "#3F3F46",
+              backgroundColor:
+                selectedMenu == "lectures"
+                  ? colorScheme == "light"
+                    ? "#16A34A"
+                    : "#166534"
+                  : colorScheme == "light"
+                  ? "#E4E4E7"
+                  : "#3F3F46",
             }}
           >
-            <Text className="text-lg" style={{color: selectedMenu == "lectures" ? "white" : "gray"}}>Lectures</Text>
+            <Text
+              className="text-lg"
+              style={{ color: selectedMenu == "lectures" ? "white" : "gray" }}
+            >
+              Lectures
+            </Text>
           </Pressable>
           <Pressable
             className="py-4 px-2 flex-1 justify-center items-center rounded-tr-lg"
             onPress={() => setSelectedMenu("labs")}
             style={{
-              backgroundColor: selectedMenu == "labs" ? colorScheme == "light" ? "#16A34A" : "#71717A" : colorScheme == "light" ? "#E4E4E7" : "#3F3F46",
+              backgroundColor:
+                selectedMenu == "labs"
+                  ? colorScheme == "light"
+                    ? "#16A34A"
+                    : "#166534"
+                  : colorScheme == "light"
+                  ? "#E4E4E7"
+                  : "#3F3F46",
             }}
           >
-            <Text className="text-lg" style={{color: selectedMenu == "labs" ? "white" : "gray"}}>Labs</Text>
+            <Text
+              className="text-lg"
+              style={{ color: selectedMenu == "labs" ? "white" : "gray" }}
+            >
+              Labs
+            </Text>
           </Pressable>
         </View>
         <View className=" rounded-b-lg pb-1 bg-white dark:bg-neutral-800">
@@ -103,4 +133,3 @@ export default function Attendance() {
     </ScrollView>
   );
 }
-

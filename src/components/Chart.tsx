@@ -1,7 +1,10 @@
 import { BarChart } from "react-native-chart-kit";
 import { Dimensions } from "react-native";
+import { memo } from "react";
+import { useColorScheme } from "nativewind";
 
-function ResultChart() {
+function Chart() {
+  const { colorScheme } = useColorScheme();
   const data = {
     labels: ["BCSC 1010", "BCSC 1020", "BCSC 1030", "BCSC 1040", "BCSC 1050", "BCSC 1060", "BCSC 1070"],
     datasets: [
@@ -10,9 +13,10 @@ function ResultChart() {
       },
     ],
   };
+  console.log("render")
   return (
     <BarChart
-      style={{ marginVertical: 8, borderRadius: 16, paddingTop: 20 }}
+      style={{  borderRadius: 16}}
       data={data}
       width={Dimensions.get("window").width + 60}
       height={220}
@@ -24,27 +28,29 @@ function ResultChart() {
       showBarTops={false}
       showValuesOnTopOfBars={true}
       chartConfig={{
-        backgroundGradientFrom: "#ffffff",
-        backgroundGradientTo: "#ffffff",
-        color: (opacity = 1) => `rgba(23, 23, 23, ${opacity})`,
+        backgroundGradientFrom: colorScheme == 'light' ? "#ffffff" : "rgb(38 38 38)",
+        backgroundGradientTo: colorScheme == 'light' ? "#ffffff" : "rgb(38 38 38)",
+        color: (opacity = 1) => colorScheme == 'light' ? `rgba(23, 23, 23, ${opacity})` : 'white',
         // labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-        fillShadowGradientFrom: "#16A34A",
-        fillShadowGradientTo: "#ffffff",
+        fillShadowGradientFrom: "#FFC107",
+        fillShadowGradientTo: "#FF5722",
         fillShadowGradientFromOpacity: 1,
         fillShadowGradientToOpacity: 0,
         decimalPlaces: 0,
         barPercentage: 0.5,
+        barRadius: 2,
         propsForVerticalLabels: {
-            fontSize: 9,
+            fontSize: 8
             // fontWeight: "bold",
         },
         propsForBackgroundLines: {
           strokeWidth: 0,
         },
+
         // useShadowColorFromDataset: true, // optional
       }}
     />
   );
 }
 
-export default ResultChart;
+export default memo(Chart);

@@ -33,10 +33,10 @@ export default function HomeScreen() {
       className="bg-neutral-100 dark:bg-neutral-900"
       showsVerticalScrollIndicator={false}
       refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        <RefreshControl refreshing={refreshing}  onRefresh={onRefresh} />
       }
     >
-      <View className="flex-1 justify-center items-center bg-neutral-100 dark:bg-neutral-900 p-4">
+      <View className="justify-center items-center bg-neutral-100 dark:bg-neutral-900 p-4">
         <View className="flex-row items-center bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-4 w-full mb-3">
           <Image
             className="rounded-full w-16 h-16 mr-4"
