@@ -1,5 +1,4 @@
 import {
-  Image,
   View,
   Text,
   ScrollView,
@@ -7,6 +6,7 @@ import {
   Pressable,
   RefreshControl,
 } from "react-native";
+import { Image } from "expo-image";
 import { useState, useCallback } from "react";
 import profile1 from "../../../assets/data/profile1.json";
 import news from "../../../assets/data/news.json";
@@ -16,7 +16,7 @@ import timetableData from "../../../assets/data/timetable.json";
 import { ChevronRightIcon } from "react-native-heroicons/solid";
 import { Link } from "expo-router";
 import { useColorScheme } from "nativewind";
-import { FadeInUp } from 'react-native-reanimated';
+import { FadeInUp } from "react-native-reanimated";
 import Animated from "react-native-reanimated";
 
 export default function HomeScreen() {
@@ -35,14 +35,15 @@ export default function HomeScreen() {
       className="bg-neutral-100 dark:bg-neutral-900"
       showsVerticalScrollIndicator={false}
       refreshControl={
-        <RefreshControl refreshing={refreshing}  onRefresh={onRefresh} />
+        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
       }
     >
       <View className="justify-center items-center bg-neutral-100 dark:bg-neutral-900 p-4">
         <View className="flex-row items-center bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-4 w-full mb-3">
           <Image
             className="rounded-full w-16 h-16 mr-4"
-            
+            contentFit="cover"
+            transition={500}
             source={require("../../../assets/images/photo.png")}
           />
           <View>
@@ -65,7 +66,10 @@ export default function HomeScreen() {
             </View>
           </View>
         </View>
-        <Animated.View entering={FadeInUp.duration(200).delay(100)} className="flex-row">
+        <Animated.View
+          entering={FadeInUp.duration(200).delay(100)}
+          className="flex-row"
+        >
           <Link href="/Attendance" asChild>
             <Pressable className="bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-4 items-center mr-2 justify-between">
               <AnimatedCircularProgress
@@ -127,7 +131,10 @@ export default function HomeScreen() {
             </Pressable>
           </Link>
         </Animated.View>
-        <Animated.View entering={FadeInUp.duration(200).delay(200)} className="bg-white dark:bg-neutral-800 shadow-lg rounded-lg mt-3 p-1 w-full">
+        <Animated.View
+          entering={FadeInUp.duration(200).delay(200)}
+          className="bg-white dark:bg-neutral-800 shadow-lg rounded-lg mt-3 p-1 w-full"
+        >
           <FlatList
             data={news}
             horizontal
@@ -141,7 +148,10 @@ export default function HomeScreen() {
           />
         </Animated.View>
 
-        <Animated.View entering={FadeInUp.duration(200).delay(300)} className="flex-row mt-3 w-full">
+        <Animated.View
+          entering={FadeInUp.duration(200).delay(300)}
+          className="flex-row mt-3 w-full"
+        >
           <Link href="/Assignments" asChild>
             <Pressable className="bg-white dark:bg-neutral-800 shadow-lg rounded-lg p-2 mr-2">
               <View className="mb-2">
@@ -176,7 +186,10 @@ export default function HomeScreen() {
             </Pressable>
           </Link>
         </Animated.View>
-        <Animated.View entering={FadeInUp.duration(200).delay(400)} className="bg-white dark:bg-neutral-800 shadow-lg rounded-lg p-2 mt-3 w-full">
+        <Animated.View
+          entering={FadeInUp.duration(200).delay(400)}
+          className="bg-white dark:bg-neutral-800 shadow-lg rounded-lg p-2 mt-3 w-full"
+        >
           <View className="border-b border-neutral-200 pb-2">
             <Text className="text-neutral-900 dark:text-neutral-200 text-lg font-medium">
               Today's Timetable

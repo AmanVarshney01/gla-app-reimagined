@@ -4,7 +4,7 @@ import {
   ScrollView,
   FlatList,
   Pressable,
-  Image,
+  // Image,
 } from "react-native";
 import help from "../../../assets/data/help.json";
 import BottomSheet, { BottomSheetScrollView } from "@gorhom/bottom-sheet";
@@ -12,6 +12,7 @@ import { useMemo, useRef, useState } from "react";
 import { useColorScheme } from "nativewind";
 import CustomBackdrop from "@/components/CustomBackdrop";
 import { PhoneIcon } from "react-native-heroicons/solid";
+import { Image } from "expo-image";
 
 export default function HelpScreen() {
   const { colorScheme } = useColorScheme();
@@ -42,6 +43,8 @@ export default function HelpScreen() {
             <Image
               className="rounded-full w-16 h-16 mr-4"
               source={require("../../../assets/images/photo.png")}
+              contentFit="cover"
+              transition={500}
             />
             <View className="flex-1 gap-[2px]">
               <View className=" flex-row flex-wrap">
