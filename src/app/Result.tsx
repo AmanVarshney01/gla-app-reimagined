@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, Pressable, FlatList } from "react-native";
 import { useState } from "react";
 // import ResultChart from "@/components/ResultChart";
-import result from "../../../assets/data/result.json";
+import result from "../../assets/data/result.json";
 
 export default function Result() {
   type semesterData = {

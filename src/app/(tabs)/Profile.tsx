@@ -26,7 +26,7 @@ export default function ProfileScreen() {
         <View className="flex justify-center items-center p-4 bg-white dark:bg-neutral-800 rounded-lg shadow-lg mb-2">
           <Image
             className="w-32 h-32 rounded-full"
-            source={require("../../../assets/images/profilephoto.jpg")}
+            source={require("../../../assets/images/photo.png")}
           />
           <Text className="text-neutral-900 dark:text-neutral-100 text-2xl mt-2">
             {currentProfile.name}

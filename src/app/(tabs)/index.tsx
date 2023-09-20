@@ -16,6 +16,8 @@ import timetableData from "../../../assets/data/timetable.json";
 import { ChevronRightIcon } from "react-native-heroicons/solid";
 import { Link } from "expo-router";
 import { useColorScheme } from "nativewind";
+import { FadeInUp } from 'react-native-reanimated';
+import Animated from "react-native-reanimated";
 
 export default function HomeScreen() {
   const { colorScheme } = useColorScheme();
@@ -40,7 +42,8 @@ export default function HomeScreen() {
         <View className="flex-row items-center bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-4 w-full mb-3">
           <Image
             className="rounded-full w-16 h-16 mr-4"
-            source={require("../../../assets/images/profilephoto.jpg")}
+            
+            source={require("../../../assets/images/photo.png")}
           />
           <View>
             <Text className="text-neutral-900 dark:text-neutral-100 text-2xl">
@@ -62,7 +65,7 @@ export default function HomeScreen() {
             </View>
           </View>
         </View>
-        <View className="flex-row">
+        <Animated.View entering={FadeInUp.duration(200).delay(100)} className="flex-row">
           <Link href="/Attendance" asChild>
             <Pressable className="bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-4 items-center mr-2 justify-between">
               <AnimatedCircularProgress
@@ -123,8 +126,8 @@ export default function HomeScreen() {
               </View>
             </Pressable>
           </Link>
-        </View>
-        <View className="bg-white dark:bg-neutral-800 shadow-lg rounded-lg mt-3 p-1 w-full">
+        </Animated.View>
+        <Animated.View entering={FadeInUp.duration(200).delay(200)} className="bg-white dark:bg-neutral-800 shadow-lg rounded-lg mt-3 p-1 w-full">
           <FlatList
             data={news}
             horizontal
@@ -136,9 +139,9 @@ export default function HomeScreen() {
               </View>
             )}
           />
-        </View>
+        </Animated.View>
 
-        <View className="flex-row mt-3 w-full">
+        <Animated.View entering={FadeInUp.duration(200).delay(300)} className="flex-row mt-3 w-full">
           <Link href="/Assignments" asChild>
             <Pressable className="bg-white dark:bg-neutral-800 shadow-lg rounded-lg p-2 mr-2">
               <View className="mb-2">
@@ -172,8 +175,8 @@ export default function HomeScreen() {
               </View>
             </Pressable>
           </Link>
-        </View>
-        <View className="bg-white dark:bg-neutral-800 shadow-lg rounded-lg p-2 mt-3 w-full">
+        </Animated.View>
+        <Animated.View entering={FadeInUp.duration(200).delay(400)} className="bg-white dark:bg-neutral-800 shadow-lg rounded-lg p-2 mt-3 w-full">
           <View className="border-b border-neutral-200 pb-2">
             <Text className="text-neutral-900 dark:text-neutral-200 text-lg font-medium">
               Today's Timetable
@@ -197,7 +200,7 @@ export default function HomeScreen() {
               )}
             />
           </View>
-        </View>
+        </Animated.View>
       </View>
     </ScrollView>
   );

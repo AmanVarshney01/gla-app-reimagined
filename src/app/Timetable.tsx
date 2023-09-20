@@ -132,7 +132,7 @@ const TimetableScreen = () => {
         selectedDate={selectedDate}
         calendarHeaderContainerStyle={{ paddingBottom: 15 }}
         style={{ paddingBottom: 20, paddingTop: 15, height: 100, borderRadius: 10 }}
-        calendarColor={colorScheme == "light" ? "white" : "#1F2937"}
+        calendarColor={colorScheme == "light" ? "white" : "rgb(38 38 38)"}
         daySelectionAnimation={{ type: 'background', duration: 0, highlightColor: '#16A34A' }}
         // iconLeftStyle={{color: colorScheme == "light" ? "black" : "white"}}
         calendarHeaderStyle={{ fontSize: 20, color: colorScheme == "light" ? "black" : "white" }}

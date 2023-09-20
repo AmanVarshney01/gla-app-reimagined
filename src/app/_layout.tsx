@@ -58,14 +58,16 @@ function RootLayoutNav() {
           backgroundColor: "#15803D",
         },
         headerTintColor: "#fffffe",
+        animation: "slide_from_right",
       }}
+    
     >
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="Settings" />
       <Stack.Screen name="Attendance" />
       <Stack.Screen name="Hostel" />
       <Stack.Screen
-        name="Result/index"
+        name="Result"
         options={{
           title: "Result",
         }}
