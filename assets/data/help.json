@@ -11,6 +11,36 @@
       "phoneNumber": 9876594321,
       "email": "hostel2@example.com",
       "role": "Hostel Coordinator"
+    },
+    {
+      "name": "Hostel 3",
+      "phoneNumber": 1357924680,
+      "email": "hostel3@example.com",
+      "role": "Hostel Coordinator"
+    },
+    {
+      "name": "Hostel 4",
+      "phoneNumber": 2468135790,
+      "email": "hostel4@example.com",
+      "role": "Hostel Coordinator"
+    },
+    {
+      "name": "Hostel 5",
+      "phoneNumber": 9876543210,
+      "email": "hostel5@example.com",
+      "role": "Hostel Coordinator"
+    },
+    {
+      "name": "Hostel 6",
+      "phoneNumber": 1234567890,
+      "email": "hostel6@example.com",
+      "role": "Hostel Coordinator"
+    },
+    {
+      "name": "Hostel 7",
+      "phoneNumber": 9876543210,
+      "email": "hostel7@example.com",
+      "role": "Hostel Coordinator"
     }
   ],
   "fireSafety": [
@@ -84,4 +114,3 @@
     }
   ]
 }
-

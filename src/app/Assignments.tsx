@@ -8,10 +8,14 @@ import {
 } from "react-native";
 import { useState, useRef, useMemo } from "react";
 import assignments from "../../assets/data/assignments.json";
-import { ChevronRightIcon, ArrowDownTrayIcon, ArrowUpTrayIcon } from "react-native-heroicons/solid";
+import {
+  ChevronRightIcon,
+  ArrowDownTrayIcon,
+  ArrowUpTrayIcon,
+} from "react-native-heroicons/solid";
 import BottomSheet from "@gorhom/bottom-sheet";
 import CustomBackdrop from "@/components/CustomBackdrop";
-import {useColorScheme} from 'nativewind'
+import { useColorScheme } from "nativewind";
 
 type AssignmentType = {
   subject: string;
@@ -22,7 +26,7 @@ type AssignmentType = {
 };
 
 export default function Assignments() {
-  const {colorScheme} = useColorScheme()
+  const { colorScheme } = useColorScheme();
   const [selectedItem, setSelectedItem] = useState({} as AssignmentType);
 
   // const [modalVisible, setModalVisible] = useState(false);
@@ -144,7 +148,7 @@ export default function Assignments() {
         // detached={false}
         enablePanDownToClose={true}
         backgroundStyle={{
-          backgroundColor: colorScheme == 'light' ? 'white' : "rgb(38 38 38)"
+          backgroundColor: colorScheme == "light" ? "white" : "rgb(38 38 38)",
         }}
       >
         <AssignmentBottomSheet
