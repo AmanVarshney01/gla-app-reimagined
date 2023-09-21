@@ -30,6 +30,7 @@ export default function HomeScreen() {
     }, 1000);
   }, []);
 
+
   return (
     <ScrollView
       className="bg-neutral-100 dark:bg-neutral-900"
@@ -44,7 +45,7 @@ export default function HomeScreen() {
             className="rounded-full w-16 h-16 mr-4"
             contentFit="cover"
             transition={500}
-            source={require("../../../assets/images/photo.png")}
+            source={require("../../../assets/images/photo.jpg")}
           />
           <View>
             <Text className="text-neutral-900 dark:text-neutral-100 text-2xl">

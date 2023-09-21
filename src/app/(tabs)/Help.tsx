@@ -42,7 +42,7 @@ export default function HelpScreen() {
           <View className="bg-white dark:bg-neutral-800 rounded-lg p-4 mb-2 flex-row items-center">
             <Image
               className="rounded-full w-16 h-16 mr-4"
-              source={require("../../../assets/images/photo.png")}
+              source={require("../../../assets/images/photo.jpg")}
               contentFit="cover"
               transition={500}
             />
