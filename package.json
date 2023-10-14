@@ -41,8 +41,7 @@
     "react-native-svg-transformer": "^1.1.0",
     "react-native-switch": "^1.5.1",
     "react-native-web": "~0.19.6",
-    "tailwindcss": "^3.3.2",
-    "expo-blur": "~12.4.1"
+    "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
