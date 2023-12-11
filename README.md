@@ -3,5 +3,6 @@
 
 Reimagined GLA University App using React Native
 
-![../assets/images/1.jpg]
-![../assets/images/2.jpg]
+![gla app reimagined screenshot dark mode](../assets/images/1.jpg)
+
+![gla app reimagined screenshot light mode](../assets/images/2.jpg?raw=true)
