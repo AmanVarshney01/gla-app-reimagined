@@ -1,6 +1,5 @@
 import { View, Text, ScrollView, Pressable, FlatList } from "react-native";
 import { useState } from "react";
-// import ResultChart from "@/components/ResultChart";
 import result from "../../assets/data/result.json";
 
 export default function Result() {
@@ -26,10 +25,8 @@ export default function Result() {
   };
 
   const [selectedSemester, setSelectedSemester] = useState<string>("semester2");
-  // const [isSelectedPracticals, setIsSelectedPracticals] = useState<boolean>(false);
 
   const resultData: Record<string, semesterData> = result;
-  // console.log(Object.keys(resultData));
 
   return (
     <ScrollView
@@ -37,12 +34,6 @@ export default function Result() {
       showsVerticalScrollIndicator={false}
     >
       <View className=" bg-neutral-100 p-2 gap-2 dark:bg-neutral-900">
-        {/* <Text className="">Result</Text> */}
-
-        {/* <ScrollView horizontal={true} className="">
-        <ResultChart/>
-      </ScrollView> */}
-
         <View className=" flex-row rounded-lg p-2">
           <FlatList
             // scrollEnabled={false}
@@ -66,7 +57,10 @@ export default function Result() {
                     color: selectedSemester == `${item}` ? "white" : "gray",
                   }}
                 >
-                  {item.slice(0, -1).charAt(0).toUpperCase() + item.slice(1, -1) + " " + item.slice(-1)}
+                  {item.slice(0, -1).charAt(0).toUpperCase() +
+                    item.slice(1, -1) +
+                    " " +
+                    item.slice(-1)}
                 </Text>
               </Pressable>
             )}

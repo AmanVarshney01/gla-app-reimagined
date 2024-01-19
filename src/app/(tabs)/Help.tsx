@@ -107,13 +107,6 @@ export default function HelpScreen() {
             scrollEnabled={false}
             data={Object.keys(helpData)}
             numColumns={2}
-            contentContainerStyle={
-              {
-                // justifyContent: "between",
-                // flexDirection: "row",
-                // width: "100%",
-              }
-            }
             keyExtractor={(item) => item}
             renderItem={({ item }) => (
               <Pressable

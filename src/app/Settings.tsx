@@ -9,7 +9,9 @@ const settings = () => {
         <View className=" py-4">
           <Text className=" text-neutral-500 text-lg py-2">General</Text>
           <View className=" flex-row justify-between items-center px-4 py-2 rounded-lg bg-white dark:bg-neutral-800">
-            <Text className=" text-base font-medium text-neutral-800 dark:text-neutral-100">Show result on Home</Text>
+            <Text className=" text-base font-medium text-neutral-800 dark:text-neutral-100">
+              Show result on Home
+            </Text>
             <Switch
               circleSize={30}
               activeText={"ON"}
@@ -19,7 +21,6 @@ const settings = () => {
               switchWidthMultiplier={2.5}
               switchLeftPx={5}
               switchRightPx={5}
-              // onValueChange={toggleColorScheme}
               value={false}
             />
           </View>
@@ -27,7 +28,9 @@ const settings = () => {
         <View className=" py-4">
           <Text className=" text-lg py-2 text-neutral-500">Notifications</Text>
           <View className=" flex-row justify-between items-center px-4 py-2 rounded-lg bg-white dark:bg-neutral-800">
-            <Text className=" text-base font-medium text-neutral-800 dark:text-neutral-100">Push Notifications</Text>
+            <Text className=" text-base font-medium text-neutral-800 dark:text-neutral-100">
+              Push Notifications
+            </Text>
             <Switch
               circleSize={30}
               activeText={"ON"}
@@ -37,7 +40,6 @@ const settings = () => {
               switchWidthMultiplier={2.5}
               switchLeftPx={5}
               switchRightPx={5}
-              // onValueChange={toggleColorScheme}
               value={true}
             />
           </View>

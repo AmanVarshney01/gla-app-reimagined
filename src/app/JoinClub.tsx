@@ -1,12 +1,9 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import { Text, View } from "react-native";
 
-export default class JoinClub extends Component {
-  render() {
-    return (
-      <View>
-        <Text>JoinClub</Text>
-      </View>
-    )
-  }
+export default function JoinClub() {
+  return (
+    <View>
+      <Text>JoinClub</Text>
+    </View>
+  );
 }

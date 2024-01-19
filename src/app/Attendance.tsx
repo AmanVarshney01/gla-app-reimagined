@@ -54,7 +54,6 @@ export default function Attendance() {
             </Text>
           </View>
           <View className=" justify-center">
-            {/* <Text className='text-3xl text-neutral-900 dark:text-neutral-100'>88%</Text> */}
             <AnimatedCircularProgress
               size={95}
               fill={currentProfile.attendance}
@@ -79,9 +78,6 @@ export default function Attendance() {
         <ScrollView className=" mt-2 pt-2 bg-white dark:bg-neutral-800" showsHorizontalScrollIndicator={false} overScrollMode="never" horizontal={true}>
           <Chart />
         </ScrollView>
-        {/* <View>
-          <Text>Subject wise attendance</Text>
-        </View> */}
         <View className="flex-row w-full justify-evenly items-center mt-3 bg-white dark:bg-neutral-800">
           <Pressable
             className="py-4 px-2 flex-1 justify-center items-center rounded-tl-lg bg-white dark:bg-neutral-800"

@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  ScrollView,
-  FlatList,
-  Pressable,
-  Modal,
-} from "react-native";
+import { View, Text, ScrollView, FlatList, Pressable } from "react-native";
 import { useState, useRef, useMemo } from "react";
 import assignments from "../../assets/data/assignments.json";
 import {
@@ -29,13 +22,8 @@ export default function Assignments() {
   const { colorScheme } = useColorScheme();
   const [selectedItem, setSelectedItem] = useState({} as AssignmentType);
 
-  // const [modalVisible, setModalVisible] = useState(false);
   const bottomSheetRef = useRef<BottomSheet>(null);
   const snapPoints = useMemo(() => ["30%", "50%"], []);
-
-  // const openModal = () => {
-  //   bottomSheetRef.current?.
-  // }
 
   const AssignmentBottomSheet = ({
     subject,
@@ -46,11 +34,6 @@ export default function Assignments() {
   }: AssignmentType) => {
     return (
       <View className="w-full bg-white dark:bg-neutral-800 rounded-t-3xl p-4">
-        {/* <View className=' mb-2 pb-1 border-b border-neutral-300'>
-              <Pressable className=' items-end' onPress={() => setModalVisible(!modalVisible)}>
-                <XMarkIcon color={'#EF4444'} size={26} />
-              </Pressable>
-            </View> */}
         <View className=" items-center w-full rounded-t-3xl mb-4">
           <View className="  w-10 h-1 bg-neutral-300 rounded-lg "></View>
         </View>
@@ -89,15 +72,7 @@ export default function Assignments() {
             </Pressable>
           )}
         </View>
-        {/* <Pressable
-          onPress={() => bottomSheetRef.current?.forceClose()}
-          className="mt-4 bg-neutral-400 dark:bg-neutral-700 px-4 py-2 rounded-lg items-center justify-center"
-        >
-          <Text className=" text-neutral-100 text-base">Close</Text>
-        </Pressable> */}
       </View>
-      // </View>
-      // </Modal>
     );
   };
 
@@ -107,7 +82,6 @@ export default function Assignments() {
         className=" bg-neutral-100 dark:bg-neutral-900"
         showsVerticalScrollIndicator={false}
       >
-        {/* <View className=" flex-1 bg-black"> */}
         <View className=" rounded-lg p-2 bg-neutral-100 dark:bg-neutral-900">
           <FlatList
             scrollEnabled={false}
@@ -135,17 +109,13 @@ export default function Assignments() {
             )}
           />
         </View>
-        {/* </View> */}
       </ScrollView>
       <BottomSheet
         ref={bottomSheetRef}
         index={-1}
         snapPoints={snapPoints}
         handleComponent={null}
-        // backdropComponent={<CustomBackdrop animatedIndex={0} animatedPosition={0} />}
         backdropComponent={(props) => <CustomBackdrop {...props} />}
-        // bottomInset={46}
-        // detached={false}
         enablePanDownToClose={true}
         backgroundStyle={{
           backgroundColor: colorScheme == "light" ? "white" : "rgb(38 38 38)",

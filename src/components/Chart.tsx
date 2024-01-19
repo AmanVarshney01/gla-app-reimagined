@@ -1,6 +1,5 @@
 import { BarChart } from "react-native-chart-kit";
 import { Dimensions } from "react-native";
-import { memo } from "react";
 import { useColorScheme } from "nativewind";
 
 function Chart() {
@@ -21,7 +20,6 @@ function Chart() {
       },
     ],
   };
-  // console.log("render")
   return (
     <BarChart
       style={{ borderRadius: 16 }}
@@ -57,11 +55,9 @@ function Chart() {
         propsForBackgroundLines: {
           strokeWidth: 0,
         },
-
-        // useShadowColorFromDataset: true, // optional
       }}
     />
   );
 }
 
-export default memo(Chart);
+export default Chart;

@@ -1,13 +1,10 @@
 import { Text, View } from 'react-native'
-import React, { Component } from 'react'
 import { Link } from 'expo-router'
 
-export default class Library extends Component {
-  render() {
+export default function Library() {
     return (
       <View>
         <Text>Library</Text>
       </View>
     )
-  }
 }
